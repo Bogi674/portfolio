@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Portfolio</title>
+    <meta name="description" content="Product manager portfolio." id="meta-description" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Karla:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <p id="status" class="status-message">Loading...</p>
+
+    <div id="page" hidden>
+      <nav class="nav">
+        <div class="wrap nav-inner">
+          <a href="#about" class="nav-brand" id="nav-brand"></a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#skills">Skills</a>
+          </div>
+          <a href="#contact" class="btn nav-cta">Let's talk</a>
+        </div>
+      </nav>
+
+      <section id="about" class="hero">
+        <div class="wrap hero-inner">
+          <div class="hero-portrait" id="hero-portrait">
+            <span>headshot<br />photo</span>
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow" id="hero-eyebrow"></p>
+            <h1 id="hero-headline"></h1>
+            <p class="hero-intro" id="hero-intro"></p>
+            <div class="hero-actions">
+              <a href="#story" class="btn">Get to know me</a>
+              <a href="#" class="link-btn" id="hero-resume" download hidden>Download résumé ↓</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main class="main">
+        <div id="story" class="highlights"></div>
+
+        <div class="story-card">
+          <p class="eyebrow">MY STORY</p>
+          <div class="story-prose" id="story-prose"></div>
+        </div>
+
+        <div id="case-studies" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">CASE STUDIES</p>
+            <h2>A few problems I liked solving</h2>
+          </div>
+          <div class="case-grid" id="case-grid"></div>
+        </div>
+
+        <div id="skills" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">SKILLS &amp; TOOLS</p>
+            <h2>What I bring to the table</h2>
+          </div>
+          <div class="skills-panel" id="skills-panel"></div>
+        </div>
+      </main>
+
+      <div id="contact" class="cta">
+        <div class="wrap cta-inner">
+          <p class="cta-headline" id="cta-headline"></p>
+          <p class="cta-body" id="cta-body"></p>
+          <a href="#" class="btn" id="cta-email">Let's talk →</a>
+        </div>
+      </div>
+
+      <footer class="wrap footer">
+        <p class="footer-copyright" id="footer-copyright"></p>
+        <div class="footer-links" id="footer-links"></div>
+      </footer>
+    </div>
+
+    <script type="module" src="js/render-home.js"></script>
+  </body>
+</html>
