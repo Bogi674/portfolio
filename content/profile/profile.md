@@ -1,4 +1,5 @@
 ---
+headshot: "headshot.jpeg"
 name: "Bogiva Mirdyanto"
 eyebrow: "PRODUCT MANAGER · DIGITAL FINANCIAL SERVICES"
 headline: "I turn walk-in habits into digital ones."
