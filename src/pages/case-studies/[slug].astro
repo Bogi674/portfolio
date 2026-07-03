@@ -1,0 +1,250 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
+  return caseStudies.map((cs) => ({
+    params: { slug: cs.id },
+    props: { entry: cs },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const profileEntries = await getCollection('profile');
+const profile = profileEntries[0];
+---
+
+<BaseLayout title={`${entry.data.title} | ${profile.data.name}`} description={entry.data.summary}>
+  <Nav name={profile.data.name} />
+
+  <div class="wrap detail">
+    <a href="/#case-studies" class="back">← Back to case studies</a>
+
+    <div class="cover" style={entry.data.coverImage ? `background-image:url(${entry.data.coverImage})` : ''}>
+      {!entry.data.coverImage && <span>hero image</span>}
+    </div>
+
+    <div class="title-block">
+      <span class="tag">{entry.data.tag}</span>
+      <h1>{entry.data.title}</h1>
+    </div>
+
+    <div class="meta">
+      <div>
+        <p class="meta-label">Role</p>
+        <p class="meta-value">{entry.data.role}</p>
+      </div>
+      <div>
+        <p class="meta-label">Timeline</p>
+        <p class="meta-value">{entry.data.timeline}</p>
+      </div>
+      <div>
+        <p class="meta-label">Impact</p>
+        <p class="meta-value impact">{entry.data.impact}</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      (entry.data.beforeImage || entry.data.afterImage) && (
+        <div class="before-after">
+          <div
+            class="ba-image"
+            style={entry.data.beforeImage ? `background-image:url(${entry.data.beforeImage})` : ''}
+          >
+            {!entry.data.beforeImage && <span>before screenshot</span>}
+          </div>
+          <div
+            class="ba-image"
+            style={entry.data.afterImage ? `background-image:url(${entry.data.afterImage})` : ''}
+          >
+            {!entry.data.afterImage && <span>after screenshot</span>}
+          </div>
+        </div>
+      )
+    }
+
+    {entry.data.quote && <blockquote class="quote">"{entry.data.quote}"</blockquote>}
+
+    <a href="/#case-studies" class="back">← Back to case studies</a>
+  </div>
+
+  <Footer
+    name={profile.data.name}
+    linkedin={profile.data.linkedin}
+    email={profile.data.email}
+    upwork={profile.data.upwork}
+  />
+</BaseLayout>
+
+<style>
+  .detail {
+    padding: 56px 32px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 800px;
+  }
+
+  .back {
+    color: var(--blue-600);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .back:hover {
+    text-decoration: underline;
+  }
+
+  .cover {
+    height: 280px;
+    border-radius: 14px;
+    background:
+      repeating-linear-gradient(
+        135deg,
+        var(--blue-tint),
+        var(--blue-tint) 12px,
+        var(--blue-tint-border) 12px,
+        var(--blue-tint-border) 24px
+      );
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--blue-600);
+  }
+
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue-600);
+    background: var(--blue-tint);
+    padding: 3px 10px;
+    border-radius: 6px;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 34px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .meta {
+    display: flex;
+    gap: 32px;
+    padding: 20px 0;
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    flex-wrap: wrap;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+
+  .meta-value {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 4px;
+    color: var(--ink);
+  }
+
+  .meta-value.impact {
+    color: var(--blue-600);
+  }
+
+  .prose :global(p) {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+  }
+
+  .prose :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .ba-image {
+    height: 180px;
+    border-radius: 12px;
+    background:
+      repeating-linear-gradient(
+        135deg,
+        var(--blue-tint),
+        var(--blue-tint) 10px,
+        var(--blue-tint-border) 10px,
+        var(--blue-tint-border) 20px
+      );
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--blue-600);
+  }
+
+  .quote {
+    border-left: 3px solid var(--amber);
+    padding: 16px 24px;
+    background: var(--amber-tint);
+    border-radius: 0 10px 10px 0;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .detail {
+      padding: 32px 20px 64px;
+    }
+
+    .cover {
+      height: 180px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    .before-after {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

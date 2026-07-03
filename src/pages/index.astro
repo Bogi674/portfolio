@@ -1,0 +1,62 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Highlights from '../components/Highlights.astro';
+import Story from '../components/Story.astro';
+import CaseStudiesSection from '../components/CaseStudiesSection.astro';
+import SkillsGrid from '../components/SkillsGrid.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+
+const profileEntries = await getCollection('profile');
+const profile = profileEntries[0];
+const { Content: StoryContent } = await render(profile);
+
+const allCaseStudies = await getCollection('case-studies', ({ data }) => data.published);
+const caseStudies = allCaseStudies.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title={`${profile.data.name} | Product Manager`} description={profile.data.intro}>
+  <Nav name={profile.data.name} />
+  <Hero
+    eyebrow={profile.data.eyebrow}
+    headline={profile.data.headline}
+    intro={profile.data.intro}
+    headshot={profile.data.headshot}
+    resumeUrl={profile.data.resumeUrl}
+  />
+  <main class="main">
+    <Highlights stats={profile.data.stats} />
+    <Story>
+      <StoryContent />
+    </Story>
+    <CaseStudiesSection caseStudies={caseStudies} />
+    <SkillsGrid />
+  </main>
+  <CTA headline={profile.data.ctaHeadline} body={profile.data.ctaBody} email={profile.data.email} />
+  <Footer
+    name={profile.data.name}
+    linkedin={profile.data.linkedin}
+    email={profile.data.email}
+    upwork={profile.data.upwork}
+  />
+</BaseLayout>
+
+<style>
+  .main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 44px 32px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  @media (max-width: 640px) {
+    .main {
+      padding: 32px 20px 48px;
+    }
+  }
+</style>

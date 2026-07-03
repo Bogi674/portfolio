@@ -1,0 +1,42 @@
+---
+---
+
+<div class="story-card">
+  <p class="eyebrow">MY STORY</p>
+  <div class="prose">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .story-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 44px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .prose {
+    max-width: 680px;
+  }
+
+  .prose :global(p) {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+
+  .prose :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    .story-card {
+      padding: 28px 24px;
+    }
+  }
+</style>

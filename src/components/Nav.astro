@@ -1,0 +1,78 @@
+---
+export interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="#about" class="brand">{name}</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#skills">Skills</a>
+    </div>
+    <a href="#contact" class="cta-btn nav-cta">Let's talk</a>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(20, 28, 44, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+    gap: 16px;
+  }
+
+  .brand {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .links {
+    display: flex;
+    gap: 32px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.72);
+    white-space: nowrap;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease;
+  }
+
+  .links a:hover {
+    color: #ffffff;
+  }
+
+  .nav-cta {
+    font-size: 14px;
+    padding: 9px 18px;
+    flex: none;
+  }
+
+  @media (max-width: 640px) {
+    .links {
+      display: none;
+    }
+  }
+</style>
