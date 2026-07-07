@@ -7,6 +7,7 @@ timeline: "4 iterations, ongoing"
 impact: "Conversion nearly 2x non-WhatsApp channels"
 quote: "The final redesign was not a bet, it was the logical conclusion of evidence the funnel had been giving us all along."
 order: 1
+coverIMage: "images/case-study-01/case-study-1-thumb.png"
 ---
 ### The Baseline: A Broken Flow That Still Won
 
@@ -14,7 +15,7 @@ Every customer reply to a WhatsApp promotion was manually recapped, fed into the
 
 And yet, even broken, the channel outperformed. WhatsApp promotion converted 30 to 40 percent better than pure cold calling. That gap was the signal: the channel had real pull, and the process was the bottleneck.
 
-![Baseline flow: manual recap, 12 to 24 hour reply time, still 30 to 40 percent better than cold calling](images/case-studies/iter-0-baseline.svg)
+![Baseline flow: manual recap, 12 to 24 hour reply time, still 30 to 40 percent better than cold calling](images/case-study-01/iter-0-baseline.svg)
 
 ### Iteration 1: Same Process, Hourly Cadence
 
@@ -22,7 +23,7 @@ The first move was deliberately minimal. Keep the manual recap workflow untouche
 
 The result was immediate. WhatsApp conversion jumped to roughly 80 percent above non-WhatsApp channels, and the channel's contribution helped push revenue up to Rp 4.9 billion.
 
-![Iteration 1: same manual process, run hourly instead of daily, conversion up 80 percent, revenue up to Rp 4.9 billion](images/case-studies/iter-1-hourly.svg)
+![Iteration 1: same manual process, run hourly instead of daily, conversion up 80 percent, revenue up to Rp 4.9 billion](images/case-study-01/iter-1-hourly.svg)
 
 ### Iteration 2: Live Agent in the Chat
 
@@ -30,7 +31,7 @@ If hourly was that much better than daily, what would near-instant look like? We
 
 Conversion stepped up again, to nearly double the non-WhatsApp flow. Two experiments, one consistent pattern: the faster the reply, the better the conversion. Speed of response was the single biggest lever in the funnel.
 
-![Iteration 2: live agent responds directly inside the chat, conversion nearly 2x non-WhatsApp](images/case-studies/iter-2-live-agent.svg)
+![Iteration 2: live agent responds directly inside the chat, conversion nearly 2x non-WhatsApp](images/case-study-01/iter-2-live-agent.svg)
 
 ### The Friction Speed Couldn't Fix
 
@@ -38,7 +39,7 @@ Even at maximum response speed, the journey had a structural flaw left over from
 
 We had optimized the conversation and never touched the handoff after it.
 
-![The remaining friction: after the deal is made in chat, the customer is routed through a separate web app to re-apply and wait for review again](images/case-studies/iter-3-friction.svg)
+![The remaining friction: after the deal is made in chat, the customer is routed through a separate web app to re-apply and wait for review again](images/case-study-01/iter-3-friction.svg)
 
 ### The Redesign: WhatsApp-Native End to End
 
@@ -46,7 +47,7 @@ The current project closes that gap by rebuilding the journey as WhatsApp-native
 
 The goal is straightforward: cut customer lead time, increase acquisition speed, remove the friction the old flow kept reintroducing, and let conversion climb further on top of what speed alone had already proven.
 
-![WhatsApp-native acquisition flow: chatbot qualifies the lead, low-risk cases get an instant decision, harder cases go to a human agent, all inside WhatsApp](images/case-studies/funnel-diagram.svg)
+![WhatsApp-native acquisition flow: chatbot qualifies the lead, low-risk cases get an instant decision, harder cases go to a human agent, all inside WhatsApp](images/case-study-01/funnel-diagram.svg)
 
 I documented the full flow as a BRD with a BPMN 2.0 process diagram, which became the shared reference across product, operations, and engineering during the build.
 

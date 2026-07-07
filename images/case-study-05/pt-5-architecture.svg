@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The hardening pass: undo, a server-timestamp presence fix, mention and sign-in fixes, checkpoint grouping, and a split into nine focused modules behind a small entry point">
+  <defs>
+    <style>
+      text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
+      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
+      .h{font-size:15px;font-weight:800;}
+      .collbl{fill:rgba(26,36,56,0.42);font-size:11px;font-weight:600;letter-spacing:0.8px;}
+      .sub{fill:rgba(26,36,56,0.42);font-size:10.5px;}
+      .fix{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.4;}
+      .mod{fill:#eaf3fb;stroke:#c3d9ee;stroke-width:1.3;}
+      .entry{fill:rgba(240,169,61,0.16);stroke:#f0a93d;stroke-width:1.5;}
+    </style>
+    <marker id="a5" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#2b71ad"/></marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#ffffff"/>
+  <text class="mono eyebrow" x="32" y="40">THE HARDENING PASS</text>
+  <text class="h" x="32" y="64">Confidence for the team, a spine that scales</text>
+
+  <!-- LEFT: confidence + bug fixes -->
+  <text class="mono collbl" x="32" y="98">CONFIDENCE AND FIXES</text>
+  <g>
+    <rect class="fix" x="32" y="110" width="330" height="40" rx="9"/>
+    <text class="mono" x="48" y="128" font-size="11.5" font-weight="700" fill="#e87500">undo x5</text>
+    <text class="sub" x="48" y="143">Ctrl/Cmd Z: edits, status, add, delete, reorder</text>
+
+    <rect class="fix" x="32" y="158" width="330" height="40" rx="9"/>
+    <text class="mono" x="48" y="176" font-size="11.5" font-weight="700" fill="#e87500">presence</text>
+    <text class="sub" x="48" y="191">server timestamp, no more clock flicker</text>
+
+    <rect class="fix" x="32" y="206" width="330" height="40" rx="9"/>
+    <text class="mono" x="48" y="224" font-size="11.5" font-weight="700" fill="#e87500">mentions</text>
+    <text class="sub" x="48" y="239">email normalized, click jumps to the row</text>
+
+    <rect class="fix" x="32" y="254" width="330" height="40" rx="9"/>
+    <text class="mono" x="48" y="272" font-size="11.5" font-weight="700" fill="#e87500">sign-in</text>
+    <text class="sub" x="48" y="287">forced account chooser</text>
+
+    <rect class="fix" x="32" y="302" width="330" height="40" rx="9"/>
+    <text class="mono" x="48" y="320" font-size="11.5" font-weight="700" fill="#e87500">checkpoints</text>
+    <text class="sub" x="48" y="335">group by week / month, collapsible</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="400" y1="100" x2="400" y2="352" stroke="rgba(20,28,44,0.1)" stroke-width="1.2"/>
+
+  <!-- RIGHT: module split -->
+  <text class="mono collbl" x="438" y="98">ONE SCRIPT, NINE MODULES</text>
+  <rect class="entry" x="438" y="110" width="330" height="36" rx="9"/>
+  <text class="mono" x="603" y="132" text-anchor="middle" font-size="12" font-weight="700" fill="#e87500">tracker.js  (entry point)</text>
+
+  <!-- 9 module chips in a 3x3 grid -->
+  <g>
+    <rect class="mod" x="438" y="166" width="104" height="34" rx="8"/><text class="mono" x="490" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">firebase</text>
+    <rect class="mod" x="551" y="166" width="104" height="34" rx="8"/><text class="mono" x="603" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">constants</text>
+    <rect class="mod" x="664" y="166" width="104" height="34" rx="8"/><text class="mono" x="716" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">state</text>
+
+    <rect class="mod" x="438" y="208" width="104" height="34" rx="8"/><text class="mono" x="490" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">ui</text>
+    <rect class="mod" x="551" y="208" width="104" height="34" rx="8"/><text class="mono" x="603" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">richtext</text>
+    <rect class="mod" x="664" y="208" width="104" height="34" rx="8"/><text class="mono" x="716" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">collab</text>
+
+    <rect class="mod" x="438" y="250" width="104" height="34" rx="8"/><text class="mono" x="490" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">data</text>
+    <rect class="mod" x="551" y="250" width="104" height="34" rx="8"/><text class="mono" x="603" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">grid</text>
+    <rect class="mod" x="664" y="250" width="104" height="34" rx="8"/><text class="mono" x="716" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">export</text>
+  </g>
+
+  <!-- entry connectors -->
+  <path d="M490,146 L490,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+  <path d="M603,146 L603,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+  <path d="M716,146 L716,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+
+  <text class="sub" x="438" y="312">sequence held: shared vars to one state object,</text>
+  <text class="sub" x="438" y="328">validate, then slice. State reached via setters.</text>
+</svg>

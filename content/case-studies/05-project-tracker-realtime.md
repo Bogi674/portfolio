@@ -6,7 +6,7 @@ role: "Product Manager and Builder, ACC ONE PM Team"
 timeline: "6 releases (v1 to v2.5), ongoing"
 impact: "One shared source of truth, live for the whole PM team"
 quote: "I never planned a real-time multi-user app. Each version only solved the friction the last one exposed, and the architecture earned its complexity one proven need at a time."
-coverImage: "images/case-studies/pt-cover.svg"
+coverImage: "images/case-study-05/pt-cover.svg"
 order: 5
 ---
 ### The Baseline: One File, Everyone's Own Copy
@@ -15,7 +15,7 @@ The tracker started as a single HTML file. You opened it, edited your projects a
 
 It worked, and that was the signal. People used it because it matched the exact shape of how our PM checkpoints actually move, in a way no generic spreadsheet did. But everyone held a private copy that drifted the moment someone else made a change. The tool was right. The single-player storage was the bottleneck.
 
-![Baseline: a single HTML file saving to one browser, shared only as stale Excel exports, so every teammate holds a diverging copy](images/case-studies/pt-0-baseline.svg)
+![Baseline: a single HTML file saving to one browser, shared only as stale Excel exports, so every teammate holds a diverging copy](images/case-study-05/pt-0-baseline.svg)
 
 ### Iteration 1: One Shared Source of Truth
 
@@ -23,7 +23,7 @@ The first real move changed one thing: stop saving to the browser, save to a sha
 
 The forked-copy problem disappeared. There was now one version of the truth, and it updated while you watched. That single change is what turned a personal utility into something a team could stand on, and it immediately raised the next question: if we are all in here together, a plain editable table is not enough.
 
-![Iteration 1: every client subscribes to one Firestore database through real-time listeners, so a single edit appears on every screen at once](images/case-studies/pt-1-realtime.svg)
+![Iteration 1: every client subscribes to one Firestore database through real-time listeners, so a single edit appears on every screen at once](images/case-study-05/pt-1-realtime.svg)
 
 ### Iteration 2: From Spreadsheet to Tool
 
@@ -31,7 +31,7 @@ Once people lived in the app together, raw cells started to feel crude. I made s
 
 None of this changed what the tool stored. It changed how much the team trusted it to hold real work. The friction had moved from storage to expression and control.
 
-![Iteration 2: status pills, drag-to-reorder rows, and rich-text fields turn a flat editable table into something that feels like a real tool](images/case-studies/pt-2-tool.svg)
+![Iteration 2: status pills, drag-to-reorder rows, and rich-text fields turn a flat editable table into something that feels like a real tool](images/case-study-05/pt-2-tool.svg)
 
 ### The Friction Sync Couldn't Fix
 
@@ -39,7 +39,7 @@ Real-time sync solved staleness and created a new problem in its place. Anyone w
 
 Speed of collaboration was never going to fix this one. It was structural. The app knew the data cold and knew nothing about the people touching it.
 
-![The gap sync could not close: one open shared database with no identity, where anyone with the link can edit and nothing records who changed what](images/case-studies/pt-3-governance-gap.svg)
+![The gap sync could not close: one open shared database with no identity, where anyone with the link can edit and nothing records who changed what](images/case-study-05/pt-3-governance-gap.svg)
 
 ### Iteration 3: Identity, Then Coordination in the Open
 
@@ -47,7 +47,7 @@ Two releases closed that gap. First I gave the app a real spine and a real door.
 
 With identity in place, collaboration features finally made sense. I added view-only share links for stakeholders who should see but not touch, **@mentions** with autocomplete and a notification bell so you could pull a specific person into a specific row, and live presence avatars driven by a heartbeat so you could see who else was in the tracker right now. The record stopped being a passive table and became a place the team coordinated inside.
 
-![Iteration 3: Google sign-in and role-based membership wrap the shared data, then view-only links, mentions, and live presence let the team coordinate on top of it](images/case-studies/pt-4-collaboration.svg)
+![Iteration 3: Google sign-in and role-based membership wrap the shared data, then view-only links, mentions, and live presence let the team coordinate on top of it](images/case-study-05/pt-4-collaboration.svg)
 
 ### The Hardening Pass: Confidence, and a Spine That Scales
 
@@ -55,7 +55,7 @@ By now the frictions were subtle and all about confidence. I added a five-step u
 
 Under all of that, I split the one growing script into nine focused modules behind a small entry point. The discipline I held to was sequencing: convert the shared mutable variables into a single state object and confirm the whole thing still works before slicing anything, rather than splitting and refactoring at the same time. Module-private state is reached through setters, not poked at from across files. It is unglamorous work, and it is the reason the tool can keep growing without collapsing under its own weight.
 
-![The hardening pass: undo, a server-timestamp presence fix, mention and sign-in fixes, checkpoint grouping, and a split into nine focused modules behind a small entry point](images/case-studies/pt-5-architecture.svg)
+![The hardening pass: undo, a server-timestamp presence fix, mention and sign-in fixes, checkpoint grouping, and a split into nine focused modules behind a small entry point](images/case-study-05/pt-5-architecture.svg)
 
 ### What This Shows
 

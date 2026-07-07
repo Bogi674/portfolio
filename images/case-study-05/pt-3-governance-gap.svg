@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The gap sync could not close: one open shared database with no identity, where anyone with the link can edit and nothing records who changed what">
+  <defs>
+    <style>
+      text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
+      .eyebrow{fill:#e87500;font-size:12px;font-weight:600;letter-spacing:1.2px;}
+      .h{font-size:15px;font-weight:800;}
+      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
+      .note{fill:#e87500;font-size:11.5px;font-weight:600;}
+      .anon{fill:#ffffff;stroke:rgba(26,36,56,0.35);stroke-width:1.5;}
+      .amberflow{stroke:#e87500;stroke-width:1.7;fill:none;}
+    </style>
+    <marker id="a3" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="#e87500"/></marker>
+  </defs>
+
+  <rect width="800" height="380" fill="#ffffff"/>
+  <text class="mono eyebrow" x="32" y="40">THE FRICTION SYNC COULD NOT FIX</text>
+  <text class="h" x="32" y="64">Shared truth, but no boundaries and no record</text>
+
+  <!-- central open DB -->
+  <ellipse cx="400" cy="176" rx="82" ry="19" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <path d="M318,176 L318,250 A82,19 0 0 0 482,250 L482,176" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <text class="h" x="400" y="222" text-anchor="middle" fill="#2b71ad">shared data</text>
+
+  <!-- unlocked padlock -->
+  <g transform="translate(384,120)">
+    <rect x="0" y="14" width="32" height="24" rx="4" fill="rgba(240,169,61,0.16)" stroke="#e87500" stroke-width="1.6"/>
+    <path d="M6,14 v-6 a10,10 0 0 1 20,0" fill="none" stroke="#e87500" stroke-width="1.6"/>
+    <circle cx="16" cy="24" r="2.4" fill="#e87500"/>
+  </g>
+  <text class="note" x="400" y="112" text-anchor="middle">open</text>
+
+  <!-- anonymous editors -->
+  <g>
+    <circle class="anon" cx="90" cy="300" r="20"/><text x="90" y="306" text-anchor="middle" font-size="16" fill="rgba(26,36,56,0.5)" font-weight="700">?</text>
+    <circle class="anon" cx="200" cy="322" r="20"/><text x="200" y="328" text-anchor="middle" font-size="16" fill="rgba(26,36,56,0.5)" font-weight="700">?</text>
+    <circle class="anon" cx="400" cy="330" r="20"/><text x="400" y="336" text-anchor="middle" font-size="16" fill="rgba(26,36,56,0.5)" font-weight="700">?</text>
+    <circle class="anon" cx="600" cy="322" r="20"/><text x="600" y="328" text-anchor="middle" font-size="16" fill="rgba(26,36,56,0.5)" font-weight="700">?</text>
+    <circle class="anon" cx="710" cy="300" r="20"/><text x="710" y="306" text-anchor="middle" font-size="16" fill="rgba(26,36,56,0.5)" font-weight="700">?</text>
+  </g>
+
+  <!-- edit arrows into DB -->
+  <path class="amberflow" d="M108,284 C170,250 260,238 322,232" marker-end="url(#a3)"/>
+  <path class="amberflow" d="M214,304 C280,272 320,250 350,240" marker-end="url(#a3)"/>
+  <path class="amberflow" d="M400,310 L400,254" marker-end="url(#a3)"/>
+  <path class="amberflow" d="M586,304 C520,272 480,250 450,240" marker-end="url(#a3)"/>
+  <path class="amberflow" d="M692,284 C630,250 540,238 478,232" marker-end="url(#a3)"/>
+
+  <text class="mono note" x="768" y="352" text-anchor="end">anyone with the link edits, nothing records who</text>
+</svg>

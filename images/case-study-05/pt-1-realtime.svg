@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 1: every client subscribes to one Firestore database through real-time listeners, so a single edit appears on every screen at once">
+  <defs>
+    <style>
+      text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
+      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
+      .h{font-size:15px;font-weight:800;}
+      .lbl{fill:rgba(26,36,56,0.62);font-size:12.5px;font-weight:600;}
+      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
+      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
+      .flow{stroke:#2b71ad;stroke-width:1.7;fill:none;}
+    </style>
+    <marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="#2b71ad"/></marker>
+  </defs>
+
+  <rect width="800" height="380" fill="#ffffff"/>
+  <text class="mono eyebrow" x="32" y="40">ITERATION 1</text>
+  <text class="h" x="32" y="64">Stop saving to the browser. Save to one live database.</text>
+
+  <!-- central Firestore -->
+  <g>
+    <ellipse cx="400" cy="150" rx="86" ry="20" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+    <path d="M314,150 L314,232 A86,20 0 0 0 486,232 L486,150" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+    <path d="M314,191 A86,20 0 0 0 486,191" fill="none" stroke="#c3d9ee" stroke-width="1.2"/>
+    <text class="h" x="400" y="205" text-anchor="middle" fill="#2b71ad">Firestore</text>
+    <text class="mono sub" x="400" y="223" text-anchor="middle">meta / projects / activities</text>
+  </g>
+
+  <!-- three clients -->
+  <g>
+    <rect class="box" x="40" y="286" width="180" height="58" rx="10"/>
+    <text class="lbl" x="130" y="312" text-anchor="middle">Client A</text>
+    <text class="sub mono" x="130" y="330" text-anchor="middle">live view</text>
+  </g>
+  <g>
+    <rect class="box" x="310" y="286" width="180" height="58" rx="10"/>
+    <text class="lbl" x="400" y="312" text-anchor="middle">Client B</text>
+    <text class="sub mono" x="400" y="330" text-anchor="middle">live view</text>
+  </g>
+  <g>
+    <rect class="box" x="580" y="286" width="180" height="58" rx="10"/>
+    <text class="lbl" x="670" y="312" text-anchor="middle">Client C</text>
+    <text class="sub mono" x="670" y="330" text-anchor="middle">live view</text>
+  </g>
+
+  <!-- two-way flows -->
+  <path class="flow" d="M340,236 C270,262 190,270 150,282" marker-end="url(#a1)"/>
+  <path class="flow" d="M140,282 C190,258 300,236 350,224" marker-end="url(#a1)"/>
+  <path class="flow" d="M400,244 L400,282" marker-end="url(#a1)"/>
+  <path class="flow" d="M410,282 L410,244" marker-end="url(#a1)"/>
+  <path class="flow" d="M460,236 C530,262 610,270 650,282" marker-end="url(#a1)"/>
+  <path class="flow" d="M660,282 C610,258 500,236 450,224" marker-end="url(#a1)"/>
+
+  <text class="mono" x="620" y="150" font-size="11.5" fill="#2b71ad" font-weight="600">onSnapshot</text>
+  <text class="mono" x="620" y="168" font-size="11.5" fill="#2b71ad" font-weight="600">listeners</text>
+
+  <!-- live badge -->
+  <rect x="586" y="96" width="182" height="34" rx="17" fill="rgba(240,169,61,0.16)" stroke="#f0a93d" stroke-width="1.3"/>
+  <circle cx="606" cy="113" r="5" fill="#e87500"/>
+  <text class="mono" x="620" y="117" font-size="11.5" fill="#e87500" font-weight="600">one edit, every screen</text>
+</svg>
