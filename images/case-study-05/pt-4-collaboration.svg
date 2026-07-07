@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 3: Google sign-in and role-based membership wrap the shared data, then view-only links, mentions, and live presence let the team coordinate on top of it">
+  <defs>
+    <style>
+      text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
+      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
+      .h{font-size:15px;font-weight:800;}
+      .lbl{fill:rgba(26,36,56,0.62);font-size:12.5px;font-weight:600;}
+      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
+      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
+      .chip{fill:#eaf3fb;stroke:#c3d9ee;stroke-width:1.3;}
+      .amberchip{fill:rgba(240,169,61,0.16);stroke:#f0a93d;stroke-width:1.3;}
+    </style>
+  </defs>
+
+  <rect width="800" height="380" fill="#ffffff"/>
+  <text class="mono eyebrow" x="32" y="40">ITERATION 3</text>
+  <text class="h" x="32" y="64">A door around the data, coordination on top</text>
+
+  <!-- data core -->
+  <rect x="300" y="270" width="200" height="72" rx="12" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <text class="h" x="400" y="302" text-anchor="middle" fill="#2b71ad">shared data</text>
+  <text class="mono sub" x="400" y="322" text-anchor="middle">Firestore, live</text>
+
+  <!-- identity ring -->
+  <rect x="232" y="182" width="336" height="120" rx="14" fill="none" stroke="#2b71ad" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <g transform="translate(250,196)">
+    <rect x="0" y="10" width="26" height="20" rx="3" fill="#ffffff" stroke="#2b71ad" stroke-width="1.5"/>
+    <path d="M5,10 v-4 a8,8 0 0 1 16,0 v4" fill="none" stroke="#2b71ad" stroke-width="1.5"/>
+  </g>
+  <text class="lbl" x="286" y="214">Google sign-in</text>
+  <text class="sub" x="286" y="231">popup, redirect fallback</text>
+  <rect class="chip" x="286" y="242" width="88" height="24" rx="12"/>
+  <text class="mono" x="330" y="258" text-anchor="middle" font-size="11" fill="#2b71ad" font-weight="600">admin</text>
+  <rect class="chip" x="384" y="242" width="98" height="24" rx="12"/>
+  <text class="mono" x="433" y="258" text-anchor="middle" font-size="11" fill="#2b71ad" font-weight="600">member</text>
+  <text class="mono sub" x="490" y="200" text-anchor="start">members keyed by email</text>
+
+  <!-- collaboration layer on top -->
+  <text class="mono sub" x="32" y="108">COORDINATION LAYER</text>
+
+  <!-- view-only link -->
+  <rect class="box" x="40" y="120" width="220" height="52" rx="10"/>
+  <text class="lbl" x="60" y="144">View-only link</text>
+  <text class="sub mono" x="60" y="162">?view=1 for stakeholders</text>
+
+  <!-- mentions -->
+  <rect class="box" x="290" y="120" width="220" height="52" rx="10"/>
+  <text class="lbl" x="310" y="144">@mentions + bell</text>
+  <text class="sub mono" x="310" y="162">pull a person into a row</text>
+  <circle cx="486" cy="132" r="7" fill="#e87500"/>
+
+  <!-- presence -->
+  <rect class="box" x="540" y="120" width="220" height="52" rx="10"/>
+  <text class="lbl" x="560" y="144">Live presence</text>
+  <text class="sub mono" x="560" y="162">who is here right now</text>
+  <circle cx="712" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
+  <circle cx="726" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
+  <circle cx="740" cy="146" r="9" fill="rgba(240,169,61,0.2)" stroke="#e87500" stroke-width="1.3"/>
+
+  <!-- connectors -->
+  <path d="M150,172 L150,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
+  <path d="M400,172 L400,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
+  <path d="M650,172 L650,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
+</svg>
