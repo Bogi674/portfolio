@@ -1,107 +1,177 @@
-# Portfolio (plain HTML, CSS, JS)
+# Bogiva Mirdyanto — PM Portfolio
 
-No framework, no build step, no npm install. Open the files, edit them, deploy them.
+Live at **[portfolio-bogi-personal.vercel.app](https://portfolio-bogi-personal.vercel.app)**
+
+Plain HTML, CSS, and JavaScript. No framework, no build step, no npm install.
+Open the files, edit them, push, and the site updates in about a minute.
+
+---
 
 ## How it works
 
-`index.html` and `case-study.html` are mostly empty shells. A small JS file in
-each fetches the `.md` files in `content/` and fills in the page in the
-browser. That is the entire mechanism, there is no server, no database, no
-build tool converting anything.
+`index.html` and `case-study.html` are mostly empty shells.
+A small JS module (`js/render-home.js` and `js/render-case-study.js`) fetches the `.md` files in `content/` and fills in the page in the browser.
+No server, no database, no build tool.
 
-## What's editable, and where
+The one non-obvious constraint: browsers block `fetch()` on `file://` URLs, so this site must be served over HTTP even locally (see [Running locally](#running-locally)).
+
+---
+
+## Project structure
+
+```
+portfolio/
+├── index.html                  Homepage shell
+├── case-study.html             Case study detail shell
+├── favicon.svg
+├── headshot.jpeg
+├── css/
+│   └── style.css               All styles in one file
+├── js/
+│   ├── render-home.js          Fetches profile + case studies, renders homepage
+│   ├── render-case-study.js    Fetches and renders a single case study
+│   ├── content.js              Markdown fetching and frontmatter parser
+│   ├── skills.js               Skills grid data
+│   └── icons.js                Inline SVG icon library
+├── content/
+│   ├── profile/
+│   │   └── profile.md          All homepage copy: name, headline, bio, stats, links
+│   └── case-studies/
+│       ├── manifest.js         Lists which case study files exist (required, see below)
+│       ├── 01-whatsapp-acquisition-funnel.md
+│       ├── 02-digital-migration.md
+│       ├── 03-lead-filtering.md
+│       ├── 04-digital-catalogue.md
+│       └── 05-project-tracker-realtime.md
+└── images/
+    ├── case-study-01/          Diagrams for CS1 (5 SVGs + 1 thumbnail)
+    ├── case-study-02/          Diagrams for CS2 (2 SVGs + 1 thumbnail)
+    └── case-study-05/          Diagrams for CS5 (6 SVGs + 1 cover)
+```
+
+---
+
+## What to edit, and where
 
 | What | Where | Format |
 |---|---|---|
-| Name, headline, bio, stats, contact links | `content/profile/profile.md` | Plain text file |
-| Case studies (cards + detail pages) | `content/case-studies/*.md` | One file per case study |
-| Which case study files exist | `content/case-studies/manifest.js` | One line per file |
+| Name, headline, bio, stats, contact links | `content/profile/profile.md` | Plain text frontmatter |
+| Case study cards + detail pages | `content/case-studies/*.md` | One file per case study |
+| Which case study files the site loads | `content/case-studies/manifest.js` | One filename per line |
 | Skills grid (text + icons) | `js/skills.js` | Plain JS array |
-| Icon shapes | `js/icons.js` | Plain JS, inline SVG |
-| Photo / resume PDF | `headshot.jpg`, `resume.pdf` (place at the project root) | Static files |
+| Icon shapes | `js/icons.js` | Plain JS, inline SVG paths |
+| Headshot | `headshot.jpeg` (project root) | Static file |
+| Resume | `resume.pdf` (project root, does not exist yet) | Static file |
 
-### Case studies: add, edit, delete
+---
 
-1. **Edit**: open a file in `content/case-studies/`, change the fields between
-   the `---` lines at the top (title, tag, role, timeline, impact, quote), or
-   the paragraphs below the second `---` (that's the text on the detail page,
-   leave a blank line between paragraphs).
-2. **Add**: copy an existing file, rename it, edit the content, then add its
-   filename (no `.md`) to the list in `content/case-studies/manifest.js`.
-   That second step is the one thing a build tool would normally do for you
-   automatically. Plain HTML can't scan a folder by itself, so this file
-   is how the page knows what exists.
-3. **Delete**: delete the file and remove its line from `manifest.js`.
-4. **Hide without deleting**: add `published: "false"` to that file's
-   frontmatter.
-5. **Reorder**: change the `order` number in each file (lower shows first).
-6. **Images**: put image/diagram files under `images/case-studies/`, then
-   reference them from the project root, e.g.
-   `coverImage: "images/case-studies/billing-cover.jpg"` (also
-   `beforeImage` / `afterImage`). Leave a field out and a placeholder block
-   renders instead, nothing breaks if you haven't added an image yet.
-   Root-relative paths matter here: the browser resolves an image path
-   against the page's URL (`index.html` or `case-study.html`), not the
-   `.md` file's own folder, so always write the path starting from
-   `images/...`, not just a bare filename.
-7. **Inside the story text**: a line starting with `###` becomes a
-   subheading, and a line like `![alt text](images/case-studies/diagram.svg)`
-   on its own becomes an embedded image. Both work anywhere in the body,
-   not just case studies, useful for breaking a longer story into sections
-   with a diagram per step.
+## Case studies
 
-### Profile / about content
+There are currently five case studies:
 
-`content/profile/profile.md` is a single file. The fields at the top drive
-the hero, the three stat cards, and the closing CTA and footer links. The
-text below the `---` is the "My Story" card.
+| # | Title | Tag | Images |
+|---|---|---|---|
+| 01 | Rebuilding an Acquisition Funnel Around WhatsApp | Product Strategy | 5 SVG diagrams + thumbnail |
+| 02 | Moving 50%+ of Walk-in Customers to Digital | Digital Adoption | 2 SVG diagrams + thumbnail |
+| 03 | Turning Better Data Filtering into Rp 4.9B in GMV | Optimization | None yet |
+| 04 | Launching the Digital Catalogue for Car Financing | 0 to 1 Launch | None yet |
+| 05 | Growing a One-File Tracker Into a Real-Time Team App | Product Building | 6 SVG diagrams + cover |
 
-### Skills grid
+### Editing a case study
 
-`js/skills.js` is a plain array grouped by category. Change a `label` to
-change the text. Change an `icon` value to use a different icon (see the
-list of available keys in `js/icons.js`). Add a new icon by adding an entry
-to `js/icons.js` first (copy the format of an existing one, it's just an SVG
-shape), then reference its key in `skills.js`.
+Each file has a frontmatter block at the top (between the `---` lines) and a story body below it.
 
-## Running it locally
+**Frontmatter fields:**
 
-Browsers block `fetch()` when you open an HTML file directly by
-double-clicking it (a `file://` link, not `http://`). This site uses
-`fetch()` to load the `.md` files, so it needs to be served over `http`, even
-locally. Two easy ways, pick whichever you have:
-
-**Option A, no installs, if you have Python (most Macs and Linux machines
-already do):**
-
-```bash
-python3 -m http.server 8000
+```
+title        Shown on the card and the detail page heading
+tag          Small label on the card (e.g. "Product Strategy")
+summary      Card excerpt, 1 to 2 sentences
+role         Shows in the meta bar on the detail page
+timeline     Shows in the meta bar
+impact       Shows in the meta bar
+quote        Pull quote on the detail page
+order        Controls card sort order on the homepage (lower = first)
+coverImage   Path to a cover image, e.g. "images/case-study-01/cover.png"
+published    Set to "false" to hide without deleting
 ```
 
-Then open `http://localhost:8000` in your browser.
+The body text starts after the second `---`. Leave a blank line between paragraphs.
 
-**Option B, if you use VS Code:** install the "Live Server" extension,
-right-click `index.html`, choose "Open with Live Server."
+A line starting with `###` becomes a section heading.
+A line like `![alt text](images/case-study-01/diagram.svg)` on its own line becomes an embedded image.
+
+Always write image paths starting from the project root (`images/...`), not relative to the markdown file.
+
+### Adding a case study
+
+1. Create `content/case-studies/your-slug.md` with the frontmatter and body.
+2. Add `'your-slug'` (no `.md`) to the array in `content/case-studies/manifest.js`.
+
+That second step is the one thing a build tool would normally automate. Plain HTML cannot scan a folder, so `manifest.js` is how the site knows what exists.
+
+### Removing a case study
+
+Delete the `.md` file and remove its entry from `manifest.js`.
+
+### Reordering
+
+Change the `order` field inside each file. Lower numbers appear first.
+The order inside `manifest.js` does not affect display order.
+
+### Adding images
+
+Put image and diagram files under `images/case-study-XX/` (create the folder if needed), then reference them in frontmatter or body text using a root-relative path like `images/case-study-XX/filename.svg`.
+
+SVG diagrams are rendered as `<img>` tags (not inlined) to avoid CSS conflicts.
+A recommended width for embedded diagrams is 720px, with hardcoded fill colors (not CSS variables, which would be overridden by the page stylesheet).
+
+---
+
+## Profile content
+
+`content/profile/profile.md` controls:
+
+- Hero: `name`, `eyebrow`, `headline`, `intro`, `headshot`, `resumeUrl`
+- Stat cards: `stat1Value`, `stat1Label`, `stat2Value`, `stat2Label`, `stat3Value`, `stat3Label`
+- CTA section: `ctaHeadline`, `ctaBody`
+- Footer links: `linkedin`, `email`
+- My Story card: the body text below the second `---`
+
+---
+
+## Skills grid
+
+`js/skills.js` exports an array grouped by category. Each skill has a `label` (display text) and an `icon` key that maps to a shape in `js/icons.js`.
+
+To change a label: edit the `label` field.
+To use a different icon: change the `icon` value to another key from `icons.js`.
+To add a new icon: add an entry to `icons.js` first (copy the format of an existing one, it is an SVG path string), then reference its key in `skills.js`.
+
+---
+
+## Running locally
+
+Browsers block `fetch()` on `file://` URLs. Serve the project over HTTP instead:
+
+**Option A — Python (no install needed, works on most Macs and Linux):**
+```
+python3 -m http.server 8000
+```
+Then open `http://localhost:8000`.
+
+**Option B — VS Code:** install the Live Server extension, right-click `index.html`, choose "Open with Live Server."
+
+---
 
 ## Deploying to Vercel
 
-This is a static site with no build step, which makes Vercel deployment
-about as simple as it gets:
+This is a static site with no build step. Deployment is straightforward:
 
-1. Push this folder to a GitHub (or GitLab/Bitbucket) repository.
-2. Go to [vercel.com](https://vercel.com), sign in, click **Add New → Project**,
-   and import that repository.
-3. When Vercel asks for a framework preset, choose **Other**. Leave the
-   build command blank and the output directory as the project root (`.`).
-   There is nothing to build, Vercel just serves the files as they are.
-4. Click **Deploy**. No environment variables needed, there's no backend.
-5. Every future `git push` to your main branch redeploys automatically. Your
-   content workflow is: edit a `.md` file (and `manifest.js` if you added or
-   removed a case study) → commit → push → live in about a minute.
-6. You get a free `your-project.vercel.app` URL immediately. A custom domain
-   is a couple of clicks in **Settings → Domains**.
+1. Push this folder to a GitHub repository.
+2. Go to [vercel.com](https://vercel.com), click **Add New > Project**, and import the repository.
+3. When Vercel asks for a framework preset, choose **Other**. Leave the build command blank and the output directory as `.` (the project root). There is nothing to build.
+4. Click **Deploy**.
+5. Every `git push` to the main branch redeploys automatically. The content workflow is: edit a `.md` file and, if you added or removed a case study, update `manifest.js`, then commit and push. Live in about a minute.
 
-You can also drag the project folder straight into
-[vercel.com/new](https://vercel.com/new) without using git at all, though
-you'd lose the automatic redeploy-on-push workflow that makes editing the
-`.md` files convenient later.
+A custom domain is available under **Settings > Domains** in the Vercel dashboard.
