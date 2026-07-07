@@ -15,4 +15,5 @@ export const caseStudyFiles = [
   '02-digital-migration',
   '03-lead-filtering',
   '04-digital-catalogue',
+  '05-project-tracker-realtime',
 ];
