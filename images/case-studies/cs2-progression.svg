@@ -1,0 +1,60 @@
+<svg width="720" height="165" viewBox="0 0 720 165" xmlns="http://www.w3.org/2000/svg"
+     font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="165" fill="white" rx="8"/>
+
+  <!-- Title -->
+  <text x="360" y="20" text-anchor="middle" font-size="11" font-weight="600"
+        letter-spacing="0.6" fill="#374151">DIGITAL SERVICE UTILIZATION · 18-MONTH PROGRESSION</text>
+
+  <!-- ===== Card 1: Baseline (x=38, y=32, w=128, h=90) ===== -->
+  <rect x="38" y="32" width="128" height="90" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="64" y="41" width="76" height="16" rx="3" fill="#f3f4f6"/>
+  <text x="102" y="53" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6b7280" letter-spacing="0.4">BASELINE</text>
+  <text x="102" y="82" text-anchor="middle" font-size="22" font-weight="800" fill="#9ca3af">~35%</text>
+  <text x="102" y="100" text-anchor="middle" font-size="9.5" fill="#9ca3af">Stagnant for years</text>
+  <text x="102" y="114" text-anchor="middle" font-size="8.5" fill="#c4c4c4">(30-40% range)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="170" y1="77" x2="206" y2="77" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- ===== Card 2: Step 1 (x=210, y=32) ===== -->
+  <rect x="210" y="32" width="128" height="90" rx="6" fill="white" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="236" y="41" width="76" height="16" rx="3" fill="#dbeafe"/>
+  <text x="274" y="53" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8" letter-spacing="0.4">STEP 1</text>
+  <text x="274" y="82" text-anchor="middle" font-size="22" font-weight="800" fill="#1d4ed8">~55%</text>
+  <text x="274" y="100" text-anchor="middle" font-size="9.5" fill="#374151">UX re-engineering</text>
+  <text x="274" y="114" text-anchor="middle" font-size="8.5" fill="#6b7280">Plate # + OTP · 2 months</text>
+
+  <!-- Arrow 2 -->
+  <line x1="342" y1="77" x2="378" y2="77" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- ===== Card 3: Steps 2+3 (x=382, y=32) ===== -->
+  <rect x="382" y="32" width="128" height="90" rx="6" fill="white" stroke="#8b5cf6" stroke-width="1.5"/>
+  <rect x="408" y="41" width="76" height="16" rx="3" fill="#ede9fe"/>
+  <text x="446" y="53" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6d28d9" letter-spacing="0.4">STEPS 2+3</text>
+  <text x="446" y="82" text-anchor="middle" font-size="22" font-weight="800" fill="#6d28d9">65%</text>
+  <text x="446" y="100" text-anchor="middle" font-size="9.5" fill="#374151">Pareto focus</text>
+  <text x="446" y="114" text-anchor="middle" font-size="8.5" fill="#6b7280">+ Digital STNK launch</text>
+
+  <!-- Arrow 3 -->
+  <line x1="514" y1="77" x2="550" y2="77" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- ===== Card 4: Result (x=554, y=32) ===== -->
+  <rect x="554" y="32" width="128" height="90" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <rect x="580" y="41" width="76" height="16" rx="3" fill="#dcfce7"/>
+  <text x="618" y="53" text-anchor="middle" font-size="8.5" font-weight="700" fill="#15803d" letter-spacing="0.4">RESULT</text>
+  <text x="618" y="82" text-anchor="middle" font-size="22" font-weight="800" fill="#15803d">71.2%</text>
+  <text x="618" y="100" text-anchor="middle" font-size="9.5" fill="#374151">Full-year average</text>
+  <text x="618" y="114" text-anchor="middle" font-size="8.5" fill="#6b7280">from 30-40% baseline</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="153" text-anchor="middle" font-size="8.5" fill="#9ca3af">50%+ of former walk-in customers now self-serve digitally · Rp 70M service charge from Digital STNK alone</text>
+
+</svg>
