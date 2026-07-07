@@ -7,7 +7,7 @@ timeline: "4 iterations, ongoing"
 impact: "Conversion nearly 2x non-WhatsApp channels"
 quote: "The final redesign was not a bet, it was the logical conclusion of evidence the funnel had been giving us all along."
 order: 1
-coverIMage: "images/case-study-01/case-study-1-thumb.png"
+coverImage: "images/case-study-01/case-study-1-thumb.png"
 ---
 ### The Baseline: A Broken Flow That Still Won
 
