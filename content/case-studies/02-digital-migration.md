@@ -13,7 +13,7 @@ order: 2
 
 Digital service adoption on ACC ONE had plateaued at 30-40% for years. Accessing any service required logging in, registering an active financing contract, then browsing available options - a three-step gate that consistently sent our predominantly older customer base back to the branch instead.
 
-![Customer journey before and after UX re-engineering](./images/case-studies/cs2-ux-flow.svg)
+![Customer journey before and after UX re-engineering](images/case-studies/cs2-ux-flow.svg)
 
 ## Three initiatives
 
@@ -23,6 +23,6 @@ Digital service adoption on ACC ONE had plateaued at 30-40% for years. Accessing
 
 **3. Digital STNK** - To give customers a compelling reason to switch channels, I launched vehicle registration renewal as a fully digital, same-day service with 80% faster SLA versus the existing process. Utilization grew nearly 3x in 4 months, contributing approximately 5% to total digital service volume and generating around Rp 70 million in service charges. Currently DKI Jakarta only - with clear potential to scale nationally.
 
-![Digital service utilization progression over 18 months](./images/case-studies/cs2-progression.svg)
+![Digital service utilization progression over 18 months](images/case-studies/cs2-progression.svg)
 
 Over 50% of customers who previously walked into a branch now self-serve digitally. Branch staff are freed up for the interactions that genuinely need a person.
