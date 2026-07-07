@@ -1,0 +1,115 @@
+<svg width="720" height="200" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg"
+     font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d1d5db"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fca5a5"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="200" fill="white" rx="8"/>
+
+  <!-- Title -->
+  <text x="360" y="22" text-anchor="middle" font-size="11" font-weight="600"
+        letter-spacing="0.6" fill="#374151">CUSTOMER JOURNEY · BEFORE VS AFTER</text>
+
+  <!-- ========= BEFORE ROW (boxes y=38, h=34) ========= -->
+
+  <rect x="10" y="38" width="66" height="24" rx="4" fill="#fee2e2"/>
+  <text x="43" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">BEFORE</text>
+
+  <!-- Customer -->
+  <rect x="88" y="38" width="80" height="34" rx="5" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="128" y="59" text-anchor="middle" font-size="11" fill="#9ca3af">Customer</text>
+
+  <!-- Arrow to Log In -->
+  <line x1="168" y1="55" x2="181" y2="55" stroke="#fca5a5" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Log In (friction) -->
+  <rect x="181" y="38" width="78" height="34" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="220" y="53" text-anchor="middle" font-size="10" fill="#b91c1c">Log In</text>
+  <text x="220" y="65" text-anchor="middle" font-size="9" fill="#dc2626">+ Account</text>
+  <circle cx="253" cy="42" r="7" fill="#ef4444"/>
+  <text x="253" y="46" text-anchor="middle" font-size="8" font-weight="700" fill="white">!</text>
+
+  <!-- Arrow to Register -->
+  <line x1="259" y1="55" x2="272" y2="55" stroke="#fca5a5" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Register Contract (friction) -->
+  <rect x="272" y="38" width="96" height="34" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="320" y="53" text-anchor="middle" font-size="10" fill="#b91c1c">Register</text>
+  <text x="320" y="65" text-anchor="middle" font-size="10" fill="#b91c1c">Contract</text>
+  <circle cx="362" cy="42" r="7" fill="#ef4444"/>
+  <text x="362" y="46" text-anchor="middle" font-size="8" font-weight="700" fill="white">!</text>
+
+  <!-- Arrow to Browse -->
+  <line x1="368" y1="55" x2="381" y2="55" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Browse Services -->
+  <rect x="381" y="38" width="92" height="34" rx="5" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="427" y="53" text-anchor="middle" font-size="10" fill="#9ca3af">Browse</text>
+  <text x="427" y="65" text-anchor="middle" font-size="10" fill="#9ca3af">Services</text>
+
+  <!-- Arrow to Use Service -->
+  <line x1="473" y1="55" x2="486" y2="55" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Use Service -->
+  <rect x="486" y="38" width="86" height="34" rx="5" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="529" y="59" text-anchor="middle" font-size="11" fill="#9ca3af">Use Service</text>
+
+  <!-- Friction annotation -->
+  <text x="270" y="88" text-anchor="middle" font-size="9" fill="#ef4444">required gates before accessing any service</text>
+  <text x="530" y="88" text-anchor="middle" font-size="9" fill="#9ca3af">5 steps total</text>
+
+  <!-- Separator -->
+  <line x1="10" y1="100" x2="710" y2="100" stroke="#f3f4f6" stroke-width="1.5"/>
+
+  <!-- ========= AFTER ROW (boxes y=110, h=34) ========= -->
+
+  <rect x="10" y="110" width="66" height="24" rx="4" fill="#dcfce7"/>
+  <text x="43" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="#15803d">AFTER</text>
+
+  <!-- Customer -->
+  <rect x="88" y="110" width="80" height="34" rx="5" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="128" y="131" text-anchor="middle" font-size="11" fill="#9ca3af">Customer</text>
+
+  <!-- Arrow to Enter Plate -->
+  <line x1="168" y1="127" x2="181" y2="127" stroke="#93c5fd" stroke-width="1.5" marker-end="url(#ab)"/>
+
+  <!-- Enter License Plate -->
+  <rect x="181" y="110" width="92" height="34" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="227" y="125" text-anchor="middle" font-size="10" fill="#1d4ed8">Enter License</text>
+  <text x="227" y="137" text-anchor="middle" font-size="10" fill="#1d4ed8">Plate #</text>
+
+  <!-- Arrow to OTP -->
+  <line x1="273" y1="127" x2="286" y2="127" stroke="#93c5fd" stroke-width="1.5" marker-end="url(#ab)"/>
+
+  <!-- OTP Verify -->
+  <rect x="286" y="110" width="80" height="34" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="326" y="125" text-anchor="middle" font-size="10" fill="#1d4ed8">OTP</text>
+  <text x="326" y="137" text-anchor="middle" font-size="10" fill="#1d4ed8">Verify ✓</text>
+
+  <!-- Arrow to Use Service -->
+  <line x1="366" y1="127" x2="379" y2="127" stroke="#93c5fd" stroke-width="1.5" marker-end="url(#ab)"/>
+
+  <!-- Use Service (green) -->
+  <rect x="379" y="110" width="86" height="34" rx="5" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="422" y="131" text-anchor="middle" font-size="11" fill="#15803d">Use Service</text>
+
+  <!-- 60% fewer steps badge -->
+  <rect x="492" y="113" width="148" height="28" rx="6" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="566" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#16a34a">60% fewer steps</text>
+
+  <!-- After annotation -->
+  <text x="330" y="158" text-anchor="middle" font-size="9" fill="#15803d">3 steps only · no account or contract registration needed</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="185" text-anchor="middle" font-size="8.5" fill="#9ca3af">Conversion reached ~55% within 2 months of launch — from branch staff knowledge upgrade alone, no paid campaign</text>
+
+</svg>
