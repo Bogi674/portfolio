@@ -1,0 +1,85 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" width="720">
+  <defs>
+    <marker id="arrs" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94A3B8"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#16A34A"/>
+    </marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="420" fill="#F8FAFC" rx="8"/>
+
+  <text x="360" y="22" text-anchor="middle" font-family="system-ui, -apple-system, Arial, sans-serif" font-size="10" fill="#94A3B8" letter-spacing="1.5">SCAN RECEIPT FLOW · HAPPY PATH AND ERROR BRANCHES</text>
+
+  <!-- STEP 1: Upload or Scan -->
+  <rect x="240" y="36" width="240" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="360" y="58" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#1E293B" font-weight="600">Upload or Scan Receipt</text>
+  <text x="360" y="76" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#64748B">Camera (SCAN) or Gallery (UPLOAD) via SCAN tab</text>
+
+  <line x1="360" y1="90" x2="360" y2="110" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrs)"/>
+
+  <!-- STEP 2: OCR -->
+  <rect x="240" y="112" width="240" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="360" y="134" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#1E293B" font-weight="600">OCR: Read and Extract Items</text>
+  <text x="360" y="152" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#64748B">Items, qty, price, store name extracted from receipt</text>
+
+  <line x1="360" y1="166" x2="360" y2="184" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrs)"/>
+
+  <!-- STEP 3: Validate and Assign Points -->
+  <rect x="240" y="186" width="240" height="54" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="360" y="208" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#92400E" font-weight="600">Validate and Assign Points</text>
+  <text x="360" y="226" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#92400E">Receipt hash check · store lookup · point conversion</text>
+
+  <!-- Branch: V-line down, then H-line -->
+  <line x1="360" y1="240" x2="360" y2="258" stroke="#94A3B8" stroke-width="1.5"/>
+  <line x1="130" y1="258" x2="590" y2="258" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <!-- Branch labels -->
+  <text x="224" y="253" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#16A34A" font-weight="700">VALID</text>
+  <text x="496" y="253" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#DC2626" font-weight="700">INVALID</text>
+
+  <!-- Left branch arrow to Success -->
+  <line x1="130" y1="258" x2="130" y2="272" stroke="#16A34A" stroke-width="1.5" marker-end="url(#arr-g)"/>
+
+  <!-- Right branch arrow to Error -->
+  <line x1="590" y1="258" x2="590" y2="272" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arr-r)"/>
+
+  <!-- SUCCESS BOX -->
+  <rect x="30" y="274" width="200" height="64" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+  <text x="130" y="298" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#14532D" font-weight="600">Points Applied</text>
+  <text x="130" y="315" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#166534">Popup: points earned + updated total</text>
+  <text x="130" y="330" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#166534">Shopping list updated with scanned items</text>
+
+  <!-- ERROR BOX -->
+  <rect x="490" y="274" width="200" height="64" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="590" y="298" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#7F1D1D" font-weight="600">Receipt Rejected</text>
+  <text x="590" y="315" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#991B1B">Duplicate · Fake · Unreadable receipt</text>
+  <text x="590" y="330" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#991B1B">Reason displayed to user</text>
+
+  <!-- Sub-branch from error box bottom -->
+  <line x1="590" y1="338" x2="590" y2="354" stroke="#DC2626" stroke-width="1.5"/>
+  <line x1="480" y1="354" x2="660" y2="354" stroke="#DC2626" stroke-width="1.5"/>
+
+  <!-- Sub-branch labels -->
+  <text x="534" y="350" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8" fill="#DC2626">within retry limit</text>
+  <text x="636" y="350" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8" fill="#DC2626">limit reached</text>
+
+  <!-- Sub-branch arrows down -->
+  <line x1="480" y1="354" x2="480" y2="362" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <line x1="660" y1="354" x2="660" y2="362" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arr-r)"/>
+
+  <!-- RETRY BOX -->
+  <rect x="410" y="364" width="140" height="44" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="480" y="384" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#7F1D1D" font-weight="600">Retry Prompt</text>
+  <text x="480" y="399" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#991B1B">Re-upload or re-scan</text>
+
+  <!-- CONTACT CS BOX -->
+  <rect x="604" y="364" width="112" height="44" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="660" y="384" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#7F1D1D" font-weight="600">Contact CS</text>
+  <text x="660" y="399" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#991B1B">CTA + apology msg</text>
+
+</svg>

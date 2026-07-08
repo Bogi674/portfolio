@@ -1,0 +1,90 @@
+<svg viewBox="0 0 720 190" xmlns="http://www.w3.org/2000/svg" width="720">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="190" fill="#F8FAFC" rx="8"/>
+
+  <text x="360" y="23" text-anchor="middle" font-family="system-ui, -apple-system, Arial, sans-serif" font-size="10" fill="#94A3B8" letter-spacing="1.5">PRODUCT MODULES · MVP 1</text>
+
+  <!-- BOX 1: Onboarding -->
+  <rect x="14" y="36" width="102" height="112" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="14" y="36" width="4" height="112" rx="2" fill="#2563EB"/>
+  <circle cx="30" cy="57" r="12" fill="#DBEAFE"/>
+  <text x="30" y="61" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#1D4ED8" font-weight="700">1</text>
+  <text x="47" y="61" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#1E293B" font-weight="600">Onboarding</text>
+  <text x="65" y="82" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">2-step walkthrough</text>
+  <text x="65" y="95" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">OTP via SMS/email</text>
+  <text x="65" y="108" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Min fields: name,</text>
+  <text x="65" y="120" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">phone/email, pwd</text>
+
+  <!-- Arrow 1 to 2 -->
+  <line x1="116" y1="92" x2="130" y2="92" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- BOX 2: Deals Discovery -->
+  <rect x="132" y="36" width="172" height="112" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="132" y="36" width="4" height="112" rx="2" fill="#2563EB"/>
+  <circle cx="148" cy="57" r="12" fill="#DBEAFE"/>
+  <text x="148" y="61" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#1D4ED8" font-weight="700">2</text>
+  <text x="167" y="61" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#1E293B" font-weight="600">Deals Discovery</text>
+  <!-- Proximity pill -->
+  <rect x="138" y="70" width="78" height="18" rx="4" fill="#DBEAFE"/>
+  <text x="177" y="83" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#1D4ED8" font-weight="600">Proximity · GPS</text>
+  <!-- Online pill -->
+  <rect x="222" y="70" width="76" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="260" y="83" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#166534" font-weight="600">Online · iframe</text>
+  <text x="218" y="104" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Map pins · push notifs</text>
+  <text x="218" y="117" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">voucher list · save deal</text>
+
+  <!-- Arrow 2 to 3 -->
+  <line x1="304" y1="92" x2="318" y2="92" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- BOX 3: Scan Receipt -->
+  <rect x="320" y="36" width="116" height="112" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="320" y="36" width="4" height="112" rx="2" fill="#F59E0B"/>
+  <circle cx="336" cy="57" r="12" fill="#FEF3C7"/>
+  <text x="336" y="61" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#92400E" font-weight="700">3</text>
+  <text x="355" y="61" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#1E293B" font-weight="600">Scan Receipt</text>
+  <text x="378" y="82" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">OCR + point logic</text>
+  <text x="378" y="95" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Dupe + fake detect</text>
+  <text x="378" y="108" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Retry handling +</text>
+  <text x="378" y="120" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">CS escalation</text>
+
+  <!-- Arrow 3 to 4 -->
+  <line x1="436" y1="92" x2="450" y2="92" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- BOX 4: Shopping List -->
+  <rect x="452" y="36" width="122" height="112" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="452" y="36" width="4" height="112" rx="2" fill="#F59E0B"/>
+  <circle cx="468" cy="57" r="12" fill="#FEF3C7"/>
+  <text x="468" y="61" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#92400E" font-weight="700">4</text>
+  <text x="487" y="61" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#1E293B" font-weight="600">Shopping List</text>
+  <text x="513" y="82" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Scan-to-list</text>
+  <text x="513" y="95" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">+ manual entry</text>
+  <text x="513" y="108" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Deal search per item</text>
+  <text x="513" y="120" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">navigate to store</text>
+
+  <!-- Arrow 4 to 5 -->
+  <line x1="574" y1="92" x2="588" y2="92" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- BOX 5: Saved Deals -->
+  <rect x="590" y="36" width="116" height="112" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="590" y="36" width="4" height="112" rx="2" fill="#F59E0B"/>
+  <circle cx="606" cy="57" r="12" fill="#FEF3C7"/>
+  <text x="606" y="61" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="11" fill="#92400E" font-weight="700">5</text>
+  <text x="625" y="61" font-family="system-ui, Arial, sans-serif" font-size="10.5" fill="#1E293B" font-weight="600">Saved Deals</text>
+  <text x="648" y="82" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Bookmark deals</text>
+  <text x="648" y="95" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Store details:</text>
+  <text x="648" y="108" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">dist, rating, expiry</text>
+  <text x="648" y="120" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="8.5" fill="#64748B">Navigate or Remove</text>
+
+  <!-- Section divider lines -->
+  <line x1="14" y1="162" x2="302" y2="162" stroke="#E2E8F0" stroke-width="1"/>
+  <line x1="320" y1="162" x2="706" y2="162" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Section labels -->
+  <text x="158" y="176" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#94A3B8" letter-spacing="1">DISCOVER</text>
+  <text x="513" y="176" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="9" fill="#94A3B8" letter-spacing="1">PLAN · ACT · SAVE</text>
+</svg>
