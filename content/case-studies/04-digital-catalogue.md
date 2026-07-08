@@ -7,8 +7,8 @@ timeline: "2019 to 2022"
 impact: "~20% of monthly digital conversions"
 order: 4
 ---
-Customers exploring new or used car financing had no digital way to browse and compare options end to end, which pushed even digitally-inclined customers back toward manual, branch-assisted processes.
+Customers exploring new or used car financing had no digital way to browse and compare options end to end. Even people who preferred self-service had to walk into a branch to get anywhere, which meant the experience started with friction before we had done anything wrong.
 
-I owned the full development cycle for the Digital Catalogue: business process design, user interviews, roadmap creation, feature scoping, PRD authoring, QA, backlog management, and post-launch SLA monitoring. I worked closely with engineering on clear PRDs and acceptance criteria to keep handoff fast and rework low.
+I owned the full development cycle: business process design, user interviews, roadmap creation, feature scoping, PRD authoring, QA, backlog management, and post-launch SLA monitoring. I worked closely with engineering on tight PRDs and explicit acceptance criteria to keep handoff clean and rework minimal.
 
-The Digital Catalogue now contributes about 20% of monthly digital conversions, and became the template we reused for later self-service features, including the Flash Sale campaign feature that followed it.
+The Digital Catalogue now contributes about 20 percent of monthly digital conversions, and became the template we reused for later self-service features, including the Flash Sale campaign feature that followed it.

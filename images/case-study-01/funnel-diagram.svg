@@ -1,5 +1,5 @@
-<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
-<rect x="0" y="0" width="760" height="300" fill="#f4f6f9"/>
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="760" height="320" fill="#f4f6f9"/>
 <defs>
   <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
     <path d="M0,0 L10,5 L0,10 z" fill="#8891a0"/>
@@ -30,5 +30,5 @@
 <line x1="379" y1="186" x2="426" y2="242.0" stroke="#8891a0" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="604" y1="92.0" x2="646" y2="148" stroke="#8891a0" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="604" y1="242.0" x2="646" y2="186" stroke="#8891a0" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="20" y="304" font-size="12.5" fill="#5b6478" font-family="Arial, Helvetica, sans-serif" font-style="italic">Documented as a BRD with a BPMN 2.0 process diagram for product, ops &amp; engineering.</text>
+<text x="20" y="300" font-size="12.5" fill="#5b6478" font-family="Arial, Helvetica, sans-serif" font-style="italic">Documented as a BRD with a BPMN 2.0 process diagram for product, ops &amp; engineering.</text>
 </svg>

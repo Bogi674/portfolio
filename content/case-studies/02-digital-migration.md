@@ -10,20 +10,20 @@ coverImage: "images/case-study-02/digital-service-thumb.jpg"
 order: 2
 ---
 
-## The problem
+## The Problem
 
-Digital service adoption on ACC ONE had plateaued at 30-40% for years. Accessing any service required logging in, registering an active financing contract, then browsing available options - a three-step gate that consistently sent our predominantly older customer base back to the branch instead.
+Digital service adoption on ACC ONE had plateaued at 30 to 40 percent for years. To access any service, customers had to log in, register an active financing contract, then browse available options. Three gates before they got to the thing they came for. Our predominantly older customer base hit that friction and went to the branch instead.
 
 ![Customer journey before and after UX re-engineering](images/case-study-02/cs2-progression.svg)
 
-## Three initiatives
+## Three Initiatives
 
-**1. Remove the login gate** - Working with the UX research team, I ran qualitative and quantitative research to define the ideal flow. The answer: eliminate account requirements entirely. Customers now enter their vehicle license plate number and verify via OTP. That's it. 60% fewer on-screen steps. Two months after launch, digital conversion reached approximately 55% from branch staff knowledge upgrades alone - no paid campaign.
+**1. Remove the login gate.** Working with the UX research team, I ran qualitative and quantitative research to define the right flow. The finding: eliminate account requirements entirely. Customers now enter their vehicle license plate number and verify via OTP. That's it. 60 percent fewer on-screen steps. Two months after launch, digital conversion reached approximately 55 percent, driven by branch staff knowledge upgrades alone with no paid campaign behind it.
 
-**2. Pareto service focus** - Rather than maintaining a wide digital catalogue, we identified the services driving most of our traffic and cut effort on 70%+ of lower-contributing ones. Onboarding resources were redirected to 4 key services. The result: highest-ever digital utilization across all four, plus a meaningful reduction in walk-in staffing costs.
+**2. Focus on what's actually driving traffic.** Rather than maintaining a wide service catalogue, we identified the handful of services driving most visits and deprioritized the 70 percent contributing least. Onboarding resources shifted to four key services. Utilization hit its highest point ever across all four, and walk-in staffing costs dropped meaningfully.
 
-**3. Digital STNK** - To give customers a compelling reason to switch channels, I launched vehicle registration renewal as a fully digital, same-day service with 80% faster SLA versus the existing process. Utilization grew nearly 3x in 4 months, contributing approximately 5% to total digital service volume and generating around Rp 70 million in service charges. Currently DKI Jakarta only - with clear potential to scale nationally.
+**3. Digital STNK.** To give customers a concrete reason to switch channels, I launched vehicle registration renewal as a fully digital, same-day service with an 80 percent faster SLA than the existing process. Utilization grew nearly 3x in four months, contributed about 5 percent to total digital service volume, and generated around Rp 70 million in service charges. Currently DKI Jakarta only, with clear potential to scale nationally.
 
 ![Digital service utilization progression over 18 months](images/case-study-02/cs2-ux-flow.svg)
 
-Over 50% of customers who previously walked into a branch now self-serve digitally. Branch staff are freed up for the interactions that genuinely need a person.
+Over 50 percent of customers who previously walked into a branch now self-serve digitally. Branch staff are freed up for the interactions that actually need a person there.
