@@ -1,7 +1,7 @@
 ---
 headshot: "headshot.jpeg"
 name: "Bogiva Mirdyanto"
-eyebrow: "PRODUCT MANAGER · BUSINES PROCESS IMPROVEMENT · DIGITAL PRODUCT ENTHUSIAST "
+eyebrow: "PRODUCT MANAGER · BUSINESS PROCESS IMPROVEMENT · DIGITAL PRODUCT ENTHUSIAST "
 headline: "I connect how businesses work to how their products should work."
 intro: "Most product problems look like UX problems until you trace them back to the process. I have spent seven years doing that tracing, across financial services platforms, client engagements, and my own builds, and building the solution once the real problem is clear."
 stat1Value: "7+ yrs"
