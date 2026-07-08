@@ -1,20 +1,21 @@
 ---
 headshot: "headshot.jpeg"
 name: "Bogiva Mirdyanto"
-eyebrow: "PRODUCT MANAGER · DIGITAL FINANCIAL SERVICES"
-headline: "I turn walk-in habits into digital ones."
-intro: "Seven plus years across digital product development and growth, including four years owning the full product lifecycle at one of Indonesia's largest multi-finance companies. I combine a technical foundation in Instrumentation Physics with a background in content and marketing, which means I think in systems and still write copy people actually read."
+eyebrow: "PRODUCT MANAGER · BUSINES PROCESS IMPROVEMENT · DIGITAL PRODUCT ENTHUSIAST "
+headline: "I connect how businesses work to how their products should work."
+intro: "Most product problems look like UX problems until you trace them back to the process. I have spent seven years doing that tracing, across financial services platforms, client engagements, and my own builds, and building the solution once the real problem is clear."
 stat1Value: "7+ yrs"
-stat1Label: "across digital product development, growth & fintech"
+stat1Label: "across digital product development, growth & customer facing"
 stat2Value: "26% YoY"
 stat2Label: "combined KPI growth across impressions, leads, sales & GMV"
 stat3Value: "50%+"
 stat3Label: "walk-in customers migrated to digital channels"
-ctaHeadline: "Got a product that needs to earn its digital adoption? I like that problem."
-ctaBody: "Tell me what's not converting and where people are dropping off, and I'll tell you honestly if I'm the right fit."
+ctaHeadline: "Got a product problem that needs solving?"
+ctaBody: "Tell me what is not working and I will give you an honest view on whether I am the right fit."
 linkedin: "https://linkedin.com/in/bogiva"
 email: "mailto:bogivamirdyanto@gmail.com"
 ---
-I started in content and marketing, writing copy and running growth campaigns for agency clients before moving into product. That background stuck with me: I still treat every feature as something that has to be understood and chosen, not just shipped. Since then I've spent seven plus years in digital product development and growth, the last four owning the full product lifecycle for ACC ONE, the digital platform at one of Indonesia's largest multi-finance companies.
+Seven years in product, four of them owning the full lifecycle for ACC ONE at one of Indonesia's largest multi-finance companies. The work spans product development, growth, and discovery across financial services, client engagements, and projects I built for myself. Each context is different but the approach is consistent. I start with how the business actually operates before touching the roadmap. That is where the real problem usually lives.
 
-Most of what I work on sits at the intersection of legacy behavior and digital adoption: getting people who are used to walking into a branch to trust an app instead. That takes more than good UI, it takes aligned roadmaps, honest data, and campaigns that meet people where they already are. I'm based in Jakarta, Indonesia, and open to product roles or consulting where that kind of adoption problem is the actual job.
+I came into product from a content and marketing background, and that still shapes how I think about features: something users have to understand, choose, and come back to, not just something that gets shipped.
+Based in Jakarta, and open to product roles or consulting where the gap between how a business runs and how its digital product works is the actual problem to solve.

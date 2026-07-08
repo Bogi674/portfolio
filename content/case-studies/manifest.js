@@ -14,6 +14,5 @@ export const caseStudyFiles = [
   '01-whatsapp-acquisition-funnel',
   '02-digital-migration',
   '03-save-app',
-  '04-digital-catalogue',
   '05-project-tracker-realtime',
 ];

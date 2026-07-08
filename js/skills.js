@@ -17,14 +17,14 @@ export const skillCategories = [
       { label: 'Roadmapping', icon: 'ganttChart' },
       { label: 'PRD Authoring', icon: 'fileText' },
       { label: 'Feature Prioritization', icon: 'target' },
-      { label: 'A/B Testing', icon: 'trendingUp' },
+      { label: 'Growth Strategy', icon: 'trendingUp' },
     ],
   },
   {
     category: 'Research & Discovery',
     accent: 'amber',
     skills: [
-      { label: 'Customer Interviews', icon: 'users' },
+      { label: 'Customer Insight', icon: 'users' },
       { label: 'User Journey Mapping', icon: 'compass' },
       { label: 'Business Process Analysis', icon: 'workflow' },
       { label: 'Google Analytics', icon: 'lineChart' },
@@ -35,9 +35,9 @@ export const skillCategories = [
     accent: 'blue',
     skills: [
       { label: 'Figma', icon: 'penTool' },
-      { label: 'Agile & Scrum', icon: 'kanban' },
+      { label: 'Agile', icon: 'kanban' },
       { label: 'Notion', icon: 'notebook' },
-      { label: 'Monday.com', icon: 'layoutGrid' },
+      { label: 'Visio', icon: 'layoutGrid' },
     ],
   },
 ];
