@@ -1,75 +1,99 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The hardening pass: undo, a server-timestamp presence fix, mention and sign-in fixes, checkpoint grouping, and a split into nine focused modules behind a small entry point">
+<svg viewBox="0 0 720 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The hardening pass: undo, presence fix, mention and sign-in fixes, checkpoint grouping, and a split into nine focused modules behind a small entry point">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
-      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
-      .h{font-size:15px;font-weight:800;}
-      .collbl{fill:rgba(26,36,56,0.42);font-size:11px;font-weight:600;letter-spacing:0.8px;}
-      .sub{fill:rgba(26,36,56,0.42);font-size:10.5px;}
-      .fix{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.4;}
-      .mod{fill:#eaf3fb;stroke:#c3d9ee;stroke-width:1.3;}
-      .entry{fill:rgba(240,169,61,0.16);stroke:#f0a93d;stroke-width:1.5;}
     </style>
-    <marker id="a5" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#2b71ad"/></marker>
+    <marker id="arr5" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L7,4.5 L0,9 Z" fill="#2b71ad"/>
+    </marker>
   </defs>
 
-  <rect width="800" height="400" fill="#ffffff"/>
-  <text class="mono eyebrow" x="32" y="40">THE HARDENING PASS</text>
-  <text class="h" x="32" y="64">Confidence for the team, a spine that scales</text>
+  <rect width="720" height="410" fill="#ffffff"/>
 
-  <!-- LEFT: confidence + bug fixes -->
-  <text class="mono collbl" x="32" y="98">CONFIDENCE AND FIXES</text>
-  <g>
-    <rect class="fix" x="32" y="110" width="330" height="40" rx="9"/>
-    <text class="mono" x="48" y="128" font-size="11.5" font-weight="700" fill="#e87500">undo x5</text>
-    <text class="sub" x="48" y="143">Ctrl/Cmd Z: edits, status, add, delete, reorder</text>
+  <!-- Header -->
+  <text class="mono" x="32" y="42" font-size="11.5" font-weight="600" letter-spacing="1.2" fill="#2b71ad">THE HARDENING PASS</text>
+  <text x="32" y="66" font-size="15" font-weight="800">Confidence for the team, a spine that scales</text>
 
-    <rect class="fix" x="32" y="158" width="330" height="40" rx="9"/>
-    <text class="mono" x="48" y="176" font-size="11.5" font-weight="700" fill="#e87500">presence</text>
-    <text class="sub" x="48" y="191">server timestamp, no more clock flicker</text>
+  <!-- ===== LEFT COLUMN: Confidence and Fixes (x=32, w=318) ===== -->
+  <text class="mono" x="32" y="100" font-size="10.5" font-weight="600" fill="rgba(26,36,56,0.45)" letter-spacing="0.8">CONFIDENCE AND FIXES</text>
 
-    <rect class="fix" x="32" y="206" width="330" height="40" rx="9"/>
-    <text class="mono" x="48" y="224" font-size="11.5" font-weight="700" fill="#e87500">mentions</text>
-    <text class="sub" x="48" y="239">email normalized, click jumps to the row</text>
+  <!-- Fix row 1: undo (y=110 to y=152) -->
+  <rect x="32" y="110" width="318" height="42" rx="9" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.4"/>
+  <text class="mono" x="50" y="128" font-size="11.5" font-weight="700" fill="#e87500">undo x5</text>
+  <text x="50" y="144" font-size="10.5" fill="rgba(26,36,56,0.42)">Ctrl/Cmd Z: edits, status, add, delete, reorder</text>
 
-    <rect class="fix" x="32" y="254" width="330" height="40" rx="9"/>
-    <text class="mono" x="48" y="272" font-size="11.5" font-weight="700" fill="#e87500">sign-in</text>
-    <text class="sub" x="48" y="287">forced account chooser</text>
+  <!-- Fix row 2: presence (y=160 to y=202) -->
+  <rect x="32" y="160" width="318" height="42" rx="9" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.4"/>
+  <text class="mono" x="50" y="178" font-size="11.5" font-weight="700" fill="#e87500">presence</text>
+  <text x="50" y="194" font-size="10.5" fill="rgba(26,36,56,0.42)">server timestamp, no more clock flicker</text>
 
-    <rect class="fix" x="32" y="302" width="330" height="40" rx="9"/>
-    <text class="mono" x="48" y="320" font-size="11.5" font-weight="700" fill="#e87500">checkpoints</text>
-    <text class="sub" x="48" y="335">group by week / month, collapsible</text>
-  </g>
+  <!-- Fix row 3: mentions (y=210 to y=252) -->
+  <rect x="32" y="210" width="318" height="42" rx="9" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.4"/>
+  <text class="mono" x="50" y="228" font-size="11.5" font-weight="700" fill="#e87500">mentions</text>
+  <text x="50" y="244" font-size="10.5" fill="rgba(26,36,56,0.42)">email normalized, click jumps to the row</text>
 
-  <!-- divider -->
-  <line x1="400" y1="100" x2="400" y2="352" stroke="rgba(20,28,44,0.1)" stroke-width="1.2"/>
+  <!-- Fix row 4: sign-in (y=260 to y=302) -->
+  <rect x="32" y="260" width="318" height="42" rx="9" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.4"/>
+  <text class="mono" x="50" y="278" font-size="11.5" font-weight="700" fill="#e87500">sign-in</text>
+  <text x="50" y="294" font-size="10.5" fill="rgba(26,36,56,0.42)">forced account chooser</text>
 
-  <!-- RIGHT: module split -->
-  <text class="mono collbl" x="438" y="98">ONE SCRIPT, NINE MODULES</text>
-  <rect class="entry" x="438" y="110" width="330" height="36" rx="9"/>
-  <text class="mono" x="603" y="132" text-anchor="middle" font-size="12" font-weight="700" fill="#e87500">tracker.js  (entry point)</text>
+  <!-- Fix row 5: checkpoints (y=310 to y=352) -->
+  <rect x="32" y="310" width="318" height="42" rx="9" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.4"/>
+  <text class="mono" x="50" y="328" font-size="11.5" font-weight="700" fill="#e87500">checkpoints</text>
+  <text x="50" y="344" font-size="10.5" fill="rgba(26,36,56,0.42)">group by week / month, collapsible</text>
 
-  <!-- 9 module chips in a 3x3 grid -->
-  <g>
-    <rect class="mod" x="438" y="166" width="104" height="34" rx="8"/><text class="mono" x="490" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">firebase</text>
-    <rect class="mod" x="551" y="166" width="104" height="34" rx="8"/><text class="mono" x="603" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">constants</text>
-    <rect class="mod" x="664" y="166" width="104" height="34" rx="8"/><text class="mono" x="716" y="187" text-anchor="middle" font-size="11" fill="#2b71ad">state</text>
+  <!-- Vertical divider -->
+  <line x1="368" y1="96" x2="368" y2="374" stroke="rgba(20,28,44,0.1)" stroke-width="1.2"/>
 
-    <rect class="mod" x="438" y="208" width="104" height="34" rx="8"/><text class="mono" x="490" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">ui</text>
-    <rect class="mod" x="551" y="208" width="104" height="34" rx="8"/><text class="mono" x="603" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">richtext</text>
-    <rect class="mod" x="664" y="208" width="104" height="34" rx="8"/><text class="mono" x="716" y="229" text-anchor="middle" font-size="11" fill="#2b71ad">collab</text>
+  <!-- ===== RIGHT COLUMN: Nine Modules (x=380, w=308) ===== -->
+  <text class="mono" x="380" y="100" font-size="10.5" font-weight="600" fill="rgba(26,36,56,0.45)" letter-spacing="0.8">ONE SCRIPT, NINE MODULES</text>
 
-    <rect class="mod" x="438" y="250" width="104" height="34" rx="8"/><text class="mono" x="490" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">data</text>
-    <rect class="mod" x="551" y="250" width="104" height="34" rx="8"/><text class="mono" x="603" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">grid</text>
-    <rect class="mod" x="664" y="250" width="104" height="34" rx="8"/><text class="mono" x="716" y="271" text-anchor="middle" font-size="11" fill="#2b71ad">export</text>
-  </g>
+  <!-- Entry point box: x=380, y=110, w=308, h=38 -->
+  <rect x="380" y="110" width="308" height="38" rx="9" fill="rgba(240,169,61,0.16)" stroke="#f0a93d" stroke-width="1.5"/>
+  <text class="mono" x="534" y="133" text-anchor="middle" font-size="12" font-weight="700" fill="#e87500">tracker.js  (entry point)</text>
 
-  <!-- entry connectors -->
-  <path d="M490,146 L490,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
-  <path d="M603,146 L603,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
-  <path d="M716,146 L716,164" stroke="#2b71ad" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+  <!-- Arrow connectors from entry box (y=148) to module row 1 (y=170) -->
+  <!-- Three arrows at module center x values: 430, 534, 638 -->
+  <line x1="430" y1="148" x2="430" y2="168" stroke="#2b71ad" stroke-width="1.3" marker-end="url(#arr5)"/>
+  <line x1="534" y1="148" x2="534" y2="168" stroke="#2b71ad" stroke-width="1.3" marker-end="url(#arr5)"/>
+  <line x1="638" y1="148" x2="638" y2="168" stroke="#2b71ad" stroke-width="1.3" marker-end="url(#arr5)"/>
 
-  <text class="sub" x="438" y="312">sequence held: shared vars to one state object,</text>
-  <text class="sub" x="438" y="328">validate, then slice. State reached via setters.</text>
+  <!-- Module grid: 3 cols x 3 rows
+       Col x values: 380, 488, 596 (width=100 each, gap=8)
+       Row y values: 170, 212, 254 (height=34 each, gap=8) -->
+
+  <!-- Row 1 -->
+  <rect x="380" y="170" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="430" y="191" text-anchor="middle" font-size="11" fill="#2b71ad">firebase</text>
+
+  <rect x="488" y="170" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="538" y="191" text-anchor="middle" font-size="11" fill="#2b71ad">constants</text>
+
+  <rect x="596" y="170" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="646" y="191" text-anchor="middle" font-size="11" fill="#2b71ad">state</text>
+
+  <!-- Row 2 -->
+  <rect x="380" y="212" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="430" y="233" text-anchor="middle" font-size="11" fill="#2b71ad">ui</text>
+
+  <rect x="488" y="212" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="538" y="233" text-anchor="middle" font-size="11" fill="#2b71ad">richtext</text>
+
+  <rect x="596" y="212" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="646" y="233" text-anchor="middle" font-size="11" fill="#2b71ad">collab</text>
+
+  <!-- Row 3 -->
+  <rect x="380" y="254" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="430" y="275" text-anchor="middle" font-size="11" fill="#2b71ad">data</text>
+
+  <rect x="488" y="254" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="538" y="275" text-anchor="middle" font-size="11" fill="#2b71ad">grid</text>
+
+  <rect x="596" y="254" width="100" height="34" rx="8" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="646" y="275" text-anchor="middle" font-size="11" fill="#2b71ad">export</text>
+
+  <!-- Sequencing note below modules -->
+  <text x="380" y="314" font-size="10.5" fill="rgba(26,36,56,0.42)">Sequence held: shared vars to one state object,</text>
+  <text x="380" y="330" font-size="10.5" fill="rgba(26,36,56,0.42)">validate, then slice. State reached via setters.</text>
 </svg>

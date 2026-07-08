@@ -1,55 +1,51 @@
-<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project Tracker evolution from a single-file v1 to a real-time multi-user v2.5">
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project Tracker evolution: v1 single HTML file to v2.5 real-time multi-user app">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
     </style>
-    <linearGradient id="cov" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#182238"/>
       <stop offset="1" stop-color="#101724"/>
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="420" fill="url(#cov)"/>
+  <rect width="720" height="380" fill="url(#bg)"/>
 
-  <!-- title -->
-  <text class="mono" x="90" y="96" font-size="15" letter-spacing="2" fill="#7cb2ee" font-weight="600">INTERNAL TOOL · ACC ONE PM TEAM</text>
-  <text x="88" y="150" font-size="44" font-weight="800" fill="#ffffff">Project Tracker</text>
-  <text x="90" y="188" font-size="18" fill="rgba(255,255,255,0.62)">One HTML file grew into a real-time, multi-user app</text>
+  <text class="mono" x="60" y="86" font-size="12" letter-spacing="2" fill="#7cb2ee" font-weight="600">INTERNAL TOOL · ACC ONE PM TEAM</text>
+  <text x="58" y="140" font-size="40" font-weight="800" fill="#ffffff">Project Tracker</text>
+  <text x="60" y="176" font-size="16" fill="rgba(255,255,255,0.62)">One HTML file grew into a real-time, multi-user app</text>
 
-  <!-- timeline -->
-  <line x1="120" y1="300" x2="1080" y2="300" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+  <!-- timeline spine -->
+  <line x1="60" y1="270" x2="660" y2="270" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
 
-  <!-- nodes -->
-  <g class="mono" font-size="13" fill="rgba(255,255,255,0.85)">
-    <!-- v1 -->
-    <circle cx="150" cy="300" r="7" fill="#f0a93d"/>
-    <text x="150" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v1</text>
-    <text x="150" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">one file</text>
+  <!-- v1 -->
+  <circle cx="60" cy="270" r="7" fill="#f0a93d"/>
+  <text class="mono" x="60" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v1</text>
+  <text class="mono" x="60" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">one file</text>
 
-    <!-- v2.0 -->
-    <circle cx="336" cy="300" r="7" fill="#7cb2ee"/>
-    <text x="336" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v2.0</text>
-    <text x="336" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">real-time sync</text>
+  <!-- v2.0 -->
+  <circle cx="192" cy="270" r="7" fill="#7cb2ee"/>
+  <text class="mono" x="192" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v2.0</text>
+  <text class="mono" x="192" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">real-time sync</text>
 
-    <!-- v2.1-2.2 -->
-    <circle cx="522" cy="300" r="7" fill="#7cb2ee"/>
-    <text x="522" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v2.1 · 2.2</text>
-    <text x="522" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">pills, rich text</text>
+  <!-- v2.1-2.2 -->
+  <circle cx="324" cy="270" r="7" fill="#7cb2ee"/>
+  <text class="mono" x="324" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v2.1 · 2.2</text>
+  <text class="mono" x="324" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">pills, rich text</text>
 
-    <!-- v2.3 -->
-    <circle cx="708" cy="300" r="7" fill="#7cb2ee"/>
-    <text x="708" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v2.3</text>
-    <text x="708" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">auth, roles</text>
+  <!-- v2.3 -->
+  <circle cx="456" cy="270" r="7" fill="#7cb2ee"/>
+  <text class="mono" x="456" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v2.3</text>
+  <text class="mono" x="456" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">auth, roles</text>
 
-    <!-- v2.4 -->
-    <circle cx="894" cy="300" r="7" fill="#7cb2ee"/>
-    <text x="894" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v2.4</text>
-    <text x="894" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">mentions, presence</text>
+  <!-- v2.4 -->
+  <circle cx="570" cy="270" r="7" fill="#7cb2ee"/>
+  <text class="mono" x="570" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v2.4</text>
+  <text class="mono" x="570" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">mentions</text>
 
-    <!-- v2.5 -->
-    <circle cx="1050" cy="300" r="9" fill="#f0a93d"/>
-    <text x="1050" y="270" text-anchor="middle" font-weight="700" fill="#ffffff">v2.5</text>
-    <text x="1050" y="332" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">undo, 9 modules</text>
-  </g>
+  <!-- v2.5 -->
+  <circle cx="660" cy="270" r="9" fill="#f0a93d"/>
+  <text class="mono" x="660" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">v2.5</text>
+  <text class="mono" x="660" y="296" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,0.6)">undo, 9 modules</text>
 </svg>

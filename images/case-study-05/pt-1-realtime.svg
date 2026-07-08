@@ -1,61 +1,72 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 1: every client subscribes to one Firestore database through real-time listeners, so a single edit appears on every screen at once">
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 1: every client subscribes to one Firestore database through real-time listeners, so a single edit appears on every screen at once">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
-      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
-      .h{font-size:15px;font-weight:800;}
-      .lbl{fill:rgba(26,36,56,0.62);font-size:12.5px;font-weight:600;}
-      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
-      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
-      .flow{stroke:#2b71ad;stroke-width:1.7;fill:none;}
     </style>
-    <marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="#2b71ad"/></marker>
+    <marker id="arr1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L7,4.5 L0,9 Z" fill="#2b71ad"/>
+    </marker>
   </defs>
 
-  <rect width="800" height="380" fill="#ffffff"/>
-  <text class="mono eyebrow" x="32" y="40">ITERATION 1</text>
-  <text class="h" x="32" y="64">Stop saving to the browser. Save to one live database.</text>
+  <rect width="720" height="380" fill="#ffffff"/>
 
-  <!-- central Firestore -->
-  <g>
-    <ellipse cx="400" cy="150" rx="86" ry="20" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
-    <path d="M314,150 L314,232 A86,20 0 0 0 486,232 L486,150" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
-    <path d="M314,191 A86,20 0 0 0 486,191" fill="none" stroke="#c3d9ee" stroke-width="1.2"/>
-    <text class="h" x="400" y="205" text-anchor="middle" fill="#2b71ad">Firestore</text>
-    <text class="mono sub" x="400" y="223" text-anchor="middle">meta / projects / activities</text>
-  </g>
+  <!-- Header -->
+  <text class="mono" x="32" y="42" font-size="11.5" font-weight="600" letter-spacing="1.2" fill="#2b71ad">ITERATION 1</text>
+  <text x="32" y="66" font-size="15" font-weight="800">Stop saving to the browser. Save to one live database.</text>
 
-  <!-- three clients -->
-  <g>
-    <rect class="box" x="40" y="286" width="180" height="58" rx="10"/>
-    <text class="lbl" x="130" y="312" text-anchor="middle">Client A</text>
-    <text class="sub mono" x="130" y="330" text-anchor="middle">live view</text>
-  </g>
-  <g>
-    <rect class="box" x="310" y="286" width="180" height="58" rx="10"/>
-    <text class="lbl" x="400" y="312" text-anchor="middle">Client B</text>
-    <text class="sub mono" x="400" y="330" text-anchor="middle">live view</text>
-  </g>
-  <g>
-    <rect class="box" x="580" y="286" width="180" height="58" rx="10"/>
-    <text class="lbl" x="670" y="312" text-anchor="middle">Client C</text>
-    <text class="sub mono" x="670" y="330" text-anchor="middle">live view</text>
-  </g>
+  <!-- Badge: top right, clear of cylinder -->
+  <rect x="506" y="82" width="182" height="30" rx="15" fill="rgba(240,169,61,0.16)" stroke="#f0a93d" stroke-width="1.3"/>
+  <circle cx="526" cy="97" r="5" fill="#e87500"/>
+  <text class="mono" x="540" y="101" font-size="11.5" font-weight="600" fill="#e87500">one edit, every screen</text>
 
-  <!-- two-way flows -->
-  <path class="flow" d="M340,236 C270,262 190,270 150,282" marker-end="url(#a1)"/>
-  <path class="flow" d="M140,282 C190,258 300,236 350,224" marker-end="url(#a1)"/>
-  <path class="flow" d="M400,244 L400,282" marker-end="url(#a1)"/>
-  <path class="flow" d="M410,282 L410,244" marker-end="url(#a1)"/>
-  <path class="flow" d="M460,236 C530,262 610,270 650,282" marker-end="url(#a1)"/>
-  <path class="flow" d="M660,282 C610,258 500,236 450,224" marker-end="url(#a1)"/>
+  <!-- onSnapshot label below badge -->
+  <text class="mono" x="528" y="126" font-size="11" font-weight="600" fill="#2b71ad">onSnapshot</text>
+  <text class="mono" x="528" y="142" font-size="11" font-weight="600" fill="#2b71ad">listeners</text>
 
-  <text class="mono" x="620" y="150" font-size="11.5" fill="#2b71ad" font-weight="600">onSnapshot</text>
-  <text class="mono" x="620" y="168" font-size="11.5" fill="#2b71ad" font-weight="600">listeners</text>
+  <!-- Firestore cylinder: cx=340, top cy=162, bottom cy=236 -->
+  <!-- Top ellipse -->
+  <ellipse cx="340" cy="162" rx="86" ry="18" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <!-- Body -->
+  <path d="M254,162 L254,236 A86,18 0 0 0 426,236 L426,162" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <!-- Mid-line ellipse (faint, for depth) -->
+  <ellipse cx="340" cy="199" rx="86" ry="18" fill="none" stroke="#c3d9ee" stroke-width="1" opacity="0.6"/>
+  <!-- Labels inside cylinder -->
+  <text x="340" y="214" text-anchor="middle" font-size="14" font-weight="800" fill="#2b71ad">Firestore</text>
+  <text class="mono" x="340" y="231" text-anchor="middle" font-size="10.5" fill="rgba(26,36,56,0.45)">meta / projects / activities</text>
 
-  <!-- live badge -->
-  <rect x="586" y="96" width="182" height="34" rx="17" fill="rgba(240,169,61,0.16)" stroke="#f0a93d" stroke-width="1.3"/>
-  <circle cx="606" cy="113" r="5" fill="#e87500"/>
-  <text class="mono" x="620" y="117" font-size="11.5" fill="#e87500" font-weight="600">one edit, every screen</text>
+  <!-- Cylinder bottom at y=236+18=254 -->
+  <!-- Client boxes: y=290 to y=356 (height=66) -->
+  <!-- Client A: x=32, w=174, center=119 -->
+  <rect x="32" y="290" width="174" height="66" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="119" y="318" text-anchor="middle" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Client A</text>
+  <text class="mono" x="119" y="336" text-anchor="middle" font-size="10.5" fill="rgba(26,36,56,0.42)">live view</text>
+
+  <!-- Client B: x=273, w=134, center=340 -->
+  <rect x="273" y="290" width="134" height="66" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="340" y="318" text-anchor="middle" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Client B</text>
+  <text class="mono" x="340" y="336" text-anchor="middle" font-size="10.5" fill="rgba(26,36,56,0.42)">live view</text>
+
+  <!-- Client C: x=514, w=174, center=601 -->
+  <rect x="514" y="290" width="174" height="66" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="601" y="318" text-anchor="middle" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Client C</text>
+  <text class="mono" x="601" y="336" text-anchor="middle" font-size="10.5" fill="rgba(26,36,56,0.42)">live view</text>
+
+  <!-- Bidirectional arrows: Firestore (bottom ~y=254) <-> Client boxes (top y=290) -->
+  <!-- Cylinder bottom: cx=340, cy_bottom=236, ry=18 -> visible bottom at y=254 -->
+
+  <!-- A down: from cylinder left area to Client A top -->
+  <path d="M296,251 C230,264 175,276 122,288" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
+  <!-- A up: from Client A top to cylinder left area -->
+  <path d="M110,288 C155,272 235,258 284,251" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
+
+  <!-- B down: straight from cylinder bottom center -->
+  <path d="M336,254 L336,288" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
+  <!-- B up: slight offset parallel -->
+  <path d="M346,288 L346,254" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
+
+  <!-- C down: from cylinder right area to Client C top -->
+  <path d="M384,251 C450,264 505,276 598,288" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
+  <!-- C up: from Client C top to cylinder right area -->
+  <path d="M610,288 C565,272 485,258 396,251" stroke="#2b71ad" stroke-width="1.6" fill="none" marker-end="url(#arr1)"/>
 </svg>

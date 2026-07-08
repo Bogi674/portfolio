@@ -1,54 +1,59 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 2: status pills, drag-to-reorder rows, and rich-text fields turn a flat editable table into something that feels like a real tool">
+<svg viewBox="0 0 720 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 2: status pills, drag-to-reorder rows, and rich-text fields turn a flat editable table into something that feels like a real tool">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
-      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
-      .h{font-size:15px;font-weight:800;}
-      .note{fill:#e87500;font-size:11.5px;font-weight:600;}
-      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
-      .callout{stroke:#e87500;stroke-width:1.3;fill:none;}
     </style>
+    <marker id="arr2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L7,4.5 L0,9 Z" fill="rgba(26,36,56,0.35)"/>
+    </marker>
   </defs>
 
-  <rect width="800" height="380" fill="#ffffff"/>
-  <text class="mono eyebrow" x="32" y="40">ITERATION 2</text>
-  <text class="h" x="32" y="64">Same data, but now it behaves like a tool</text>
+  <rect width="720" height="370" fill="#ffffff"/>
 
-  <!-- top callouts -->
-  <text class="note" x="112" y="104">grip: drag to reorder</text>
-  <text class="note" x="360" y="104">status as a tappable pill</text>
-  <text class="note" x="600" y="104" text-anchor="middle">rich text in fields</text>
-  <path class="callout" d="M120,112 L66,182"/>
-  <path class="callout" d="M404,112 L396,168"/>
-  <path class="callout" d="M600,112 L560,182"/>
+  <!-- Header -->
+  <text class="mono" x="32" y="42" font-size="11.5" font-weight="600" letter-spacing="1.2" fill="#2b71ad">ITERATION 2</text>
+  <text x="32" y="66" font-size="15" font-weight="800">Same data, but now it behaves like a tool</text>
 
-  <!-- tracker row card -->
-  <rect class="box" x="32" y="176" width="736" height="86" rx="12"/>
+  <!-- Callout labels (above the row card) -->
+  <text x="68" y="98" font-size="11.5" font-weight="600" fill="#e87500">grip: drag to reorder</text>
+  <text x="296" y="98" font-size="11.5" font-weight="600" fill="#e87500">status: tappable pill</text>
+  <text x="554" y="98" font-size="11.5" font-weight="600" fill="#e87500">rich text in fields</text>
 
-  <!-- drag grip -->
-  <g>
-    <circle cx="60" cy="210" r="1.8" fill="rgba(26,36,56,0.5)"/><circle cx="60" cy="218" r="1.8" fill="rgba(26,36,56,0.5)"/><circle cx="60" cy="226" r="1.8" fill="rgba(26,36,56,0.5)"/>
-    <circle cx="68" cy="210" r="1.8" fill="rgba(26,36,56,0.5)"/><circle cx="68" cy="218" r="1.8" fill="rgba(26,36,56,0.5)"/><circle cx="68" cy="226" r="1.8" fill="rgba(26,36,56,0.5)"/>
-  </g>
+  <!-- Callout connector lines to the row card (starts y=106, card starts y=180) -->
+  <line x1="84" y1="106" x2="62" y2="178" stroke="#e87500" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="368" y1="106" x2="368" y2="178" stroke="#e87500" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="596" y1="106" x2="548" y2="178" stroke="#e87500" stroke-width="1.2" stroke-dasharray="3 3"/>
 
-  <!-- work item -->
-  <text class="mono" x="92" y="206" font-size="11" fill="rgba(26,36,56,0.42)">WORK ITEM</text>
-  <text x="92" y="228" font-size="13.5" font-weight="700">Q3 onboarding revamp</text>
+  <!-- Row card: x=32, y=180, w=656, h=92 -->
+  <rect x="32" y="180" width="656" height="92" rx="12" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
 
-  <!-- status pill -->
-  <rect x="330" y="202" width="132" height="30" rx="15" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
-  <circle cx="350" cy="217" r="5" fill="#2b71ad"/>
-  <text x="364" y="221" font-size="12.5" font-weight="600" fill="#2b71ad">In Progress</text>
-  <path d="M444,214 l6,6 l6,-6" fill="none" stroke="#2b71ad" stroke-width="1.6"/>
+  <!-- Drag grip: two columns of 3 dots at x=50 and x=58 -->
+  <circle cx="50" cy="212" r="1.8" fill="rgba(26,36,56,0.5)"/>
+  <circle cx="50" cy="220" r="1.8" fill="rgba(26,36,56,0.5)"/>
+  <circle cx="50" cy="228" r="1.8" fill="rgba(26,36,56,0.5)"/>
+  <circle cx="58" cy="212" r="1.8" fill="rgba(26,36,56,0.5)"/>
+  <circle cx="58" cy="220" r="1.8" fill="rgba(26,36,56,0.5)"/>
+  <circle cx="58" cy="228" r="1.8" fill="rgba(26,36,56,0.5)"/>
 
-  <!-- next action rich text -->
-  <text class="mono" x="500" y="206" font-size="11" fill="rgba(26,36,56,0.42)">NEXT ACTION</text>
-  <text x="500" y="228" font-size="13">review <tspan font-weight="800">BRD</tspan> with ops</text>
+  <!-- Work item column -->
+  <text class="mono" x="76" y="204" font-size="10.5" fill="rgba(26,36,56,0.42)">WORK ITEM</text>
+  <text x="76" y="226" font-size="14" font-weight="700">Q3 onboarding revamp</text>
 
-  <!-- export flow -->
-  <path d="M400,262 L400,300" stroke="rgba(26,36,56,0.35)" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/>
-  <rect class="box" x="296" y="300" width="208" height="52" rx="10"/>
-  <text class="mono" x="318" y="323" font-size="12.5" fill="rgba(26,36,56,0.62)" font-weight="600">export.xlsx</text>
-  <text x="318" y="341" font-size="11" fill="rgba(26,36,56,0.42)">formatting flattened to plain text</text>
+  <!-- Status pill: centered around x=368, y=213 -->
+  <rect x="306" y="200" width="124" height="28" rx="14" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <circle cx="322" cy="214" r="5" fill="#2b71ad"/>
+  <text x="333" y="218" font-size="12" font-weight="600" fill="#2b71ad">In Progress</text>
+  <!-- Chevron -->
+  <path d="M416,210 l5,5 l5,-5" fill="none" stroke="#2b71ad" stroke-width="1.5"/>
+
+  <!-- Next action column (rich text) -->
+  <text class="mono" x="460" y="204" font-size="10.5" fill="rgba(26,36,56,0.42)">NEXT ACTION</text>
+  <text x="460" y="226" font-size="13.5">review <tspan font-weight="800">BRD</tspan> with ops</text>
+
+  <!-- Export flow -->
+  <path d="M360,272 L360,296" stroke="rgba(26,36,56,0.3)" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#arr2)"/>
+  <rect x="276" y="296" width="168" height="50" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text class="mono" x="298" y="318" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.62)">export.xlsx</text>
+  <text x="298" y="336" font-size="10.5" fill="rgba(26,36,56,0.42)">formatting flattened to plain text</text>
 </svg>

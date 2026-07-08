@@ -1,64 +1,63 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baseline: a single HTML file saving to one browser, shared only as stale Excel exports, so every teammate holds a diverging copy">
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baseline: each teammate holds a private browser copy that drifts the moment someone else makes a change">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
-      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
-      .h{font-size:15px;font-weight:800;}
-      .lbl{fill:rgba(26,36,56,0.62);font-size:12.5px;font-weight:600;}
-      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
-      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
-      .stale{stroke:rgba(26,36,56,0.4);stroke-width:1.6;fill:none;stroke-dasharray:5 4;}
-      .amberchip{fill:rgba(240,169,61,0.16);stroke:#f0a93d;stroke-width:1.4;}
     </style>
-    <marker id="arrStale" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="rgba(26,36,56,0.4)"/></marker>
+    <marker id="arrS0" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L7,4.5 L0,9 Z" fill="rgba(26,36,56,0.4)"/>
+    </marker>
   </defs>
 
-  <rect width="800" height="380" fill="#ffffff"/>
-  <text class="mono eyebrow" x="32" y="40">BASELINE</text>
-  <text class="h" x="32" y="64">One HTML file, saved to the browser it was opened in</text>
+  <rect width="720" height="360" fill="#ffffff"/>
 
-  <!-- three diverging local copies -->
-  <g>
-    <!-- copy 1 -->
-    <rect class="box" x="32" y="96" width="220" height="150" rx="12"/>
-    <circle cx="56" cy="122" r="7" fill="#eaf3fb" stroke="#c3d9ee"/>
-    <text class="lbl" x="72" y="126">Teammate A</text>
-    <text class="sub mono" x="176" y="126">localStorage</text>
-    <rect x="52" y="146" width="180" height="14" rx="3" fill="#eaf3fb"/>
-    <rect x="52" y="168" width="180" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="52" y="190" width="120" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="52" y="212" width="150" height="14" rx="3" fill="#f4f6f9"/>
-  </g>
-  <g>
-    <rect class="box" x="290" y="96" width="220" height="150" rx="12"/>
-    <circle cx="314" cy="122" r="7" fill="#eaf3fb" stroke="#c3d9ee"/>
-    <text class="lbl" x="330" y="126">Teammate B</text>
-    <text class="sub mono" x="434" y="126">localStorage</text>
-    <rect x="310" y="146" width="180" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="310" y="168" width="140" height="14" rx="3" fill="#eaf3fb"/>
-    <rect x="310" y="190" width="180" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="310" y="212" width="100" height="14" rx="3" fill="#f4f6f9"/>
-  </g>
-  <g>
-    <rect class="box" x="548" y="96" width="220" height="150" rx="12"/>
-    <circle cx="572" cy="122" r="7" fill="#eaf3fb" stroke="#c3d9ee"/>
-    <text class="lbl" x="588" y="126">Teammate C</text>
-    <text class="sub mono" x="692" y="126">localStorage</text>
-    <rect x="568" y="146" width="120" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="568" y="168" width="180" height="14" rx="3" fill="#f4f6f9"/>
-    <rect x="568" y="190" width="160" height="14" rx="3" fill="#eaf3fb"/>
-    <rect x="568" y="212" width="180" height="14" rx="3" fill="#f4f6f9"/>
-  </g>
+  <!-- Header -->
+  <text class="mono" x="32" y="42" font-size="11.5" font-weight="600" letter-spacing="1.2" fill="#2b71ad">BASELINE</text>
+  <text x="32" y="66" font-size="15" font-weight="800">One HTML file, saved to the browser it was opened in</text>
 
-  <!-- stale excel handoff -->
-  <path class="stale" d="M142,246 L142,286" marker-end="url(#arrStale)"/>
-  <path class="stale" d="M400,246 L400,286" marker-end="url(#arrStale)"/>
-  <path class="stale" d="M658,246 L658,286" marker-end="url(#arrStale)"/>
+  <!-- Box A: x=32, w=192, center=128 -->
+  <rect x="32" y="90" width="192" height="126" rx="12" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <circle cx="54" cy="116" r="7" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.2"/>
+  <text x="68" y="120" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Teammate A</text>
+  <text class="mono" x="216" y="120" font-size="10" text-anchor="end" fill="rgba(26,36,56,0.42)">localStorage</text>
+  <rect x="52" y="134" width="152" height="12" rx="3" fill="#eaf3fb"/>
+  <rect x="52" y="154" width="120" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="52" y="174" width="152" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="52" y="194" width="88" height="12" rx="3" fill="#f4f6f9"/>
 
-  <rect class="box" x="300" y="292" width="200" height="52" rx="10"/>
-  <text class="mono lbl" x="322" y="315">export.xls</text>
-  <text class="sub" x="322" y="333">emailed around, stale on arrival</text>
+  <!-- Box B: x=264, w=192, center=360 -->
+  <rect x="264" y="90" width="192" height="126" rx="12" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <circle cx="286" cy="116" r="7" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.2"/>
+  <text x="300" y="120" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Teammate B</text>
+  <text class="mono" x="448" y="120" font-size="10" text-anchor="end" fill="rgba(26,36,56,0.42)">localStorage</text>
+  <rect x="284" y="134" width="120" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="284" y="154" width="152" height="12" rx="3" fill="#eaf3fb"/>
+  <rect x="284" y="174" width="100" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="284" y="194" width="152" height="12" rx="3" fill="#f4f6f9"/>
 
-  <text class="mono" x="520" y="320" font-size="12" fill="#e87500" font-weight="600">every copy quietly diverges</text>
+  <!-- Box C: x=496, w=192, center=592 -->
+  <rect x="496" y="90" width="192" height="126" rx="12" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <circle cx="518" cy="116" r="7" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.2"/>
+  <text x="532" y="120" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Teammate C</text>
+  <text class="mono" x="680" y="120" font-size="10" text-anchor="end" fill="rgba(26,36,56,0.42)">localStorage</text>
+  <rect x="516" y="134" width="152" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="516" y="154" width="88" height="12" rx="3" fill="#f4f6f9"/>
+  <rect x="516" y="174" width="152" height="12" rx="3" fill="#eaf3fb"/>
+  <rect x="516" y="194" width="120" height="12" rx="3" fill="#f4f6f9"/>
+
+  <!-- Dashed paths from each box to export box -->
+  <!-- A center (128,216) -> export left edge (270,260) via waypoint (128,240) -->
+  <path d="M128,216 L128,240 L270,260" fill="none" stroke="rgba(26,36,56,0.38)" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrS0)"/>
+  <!-- B center (360,216) -> export top center (360,260) straight down -->
+  <path d="M360,216 L360,260" fill="none" stroke="rgba(26,36,56,0.38)" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrS0)"/>
+  <!-- C center (592,216) -> export right edge (450,260) via waypoint (592,240) -->
+  <path d="M592,216 L592,240 L450,260" fill="none" stroke="rgba(26,36,56,0.38)" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrS0)"/>
+
+  <!-- Export box: x=270, w=180, y=260-312, center=(360,286) -->
+  <rect x="270" y="260" width="180" height="52" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text class="mono" x="292" y="282" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">export.xls</text>
+  <text x="292" y="300" font-size="11" fill="rgba(26,36,56,0.42)">emailed around, stale on arrival</text>
+
+  <!-- Warning note -->
+  <text class="mono" x="32" y="344" font-size="11.5" font-weight="600" fill="#e87500">every copy quietly diverges</text>
 </svg>

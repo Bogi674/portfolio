@@ -1,65 +1,84 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 3: Google sign-in and role-based membership wrap the shared data, then view-only links, mentions, and live presence let the team coordinate on top of it">
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iteration 3: Google sign-in and role-based membership wrap the shared data, then view-only links, mentions, and live presence let the team coordinate on top of it">
   <defs>
     <style>
       text{font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;fill:#1a2438;}
       .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
-      .eyebrow{fill:#2b71ad;font-size:12px;font-weight:600;letter-spacing:1.2px;}
-      .h{font-size:15px;font-weight:800;}
-      .lbl{fill:rgba(26,36,56,0.62);font-size:12.5px;font-weight:600;}
-      .sub{fill:rgba(26,36,56,0.42);font-size:11px;}
-      .box{fill:#ffffff;stroke:rgba(20,28,44,0.14);stroke-width:1.5;}
-      .chip{fill:#eaf3fb;stroke:#c3d9ee;stroke-width:1.3;}
-      .amberchip{fill:rgba(240,169,61,0.16);stroke:#f0a93d;stroke-width:1.3;}
     </style>
   </defs>
 
-  <rect width="800" height="380" fill="#ffffff"/>
-  <text class="mono eyebrow" x="32" y="40">ITERATION 3</text>
-  <text class="h" x="32" y="64">A door around the data, coordination on top</text>
+  <rect width="720" height="450" fill="#ffffff"/>
 
-  <!-- data core -->
-  <rect x="300" y="270" width="200" height="72" rx="12" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
-  <text class="h" x="400" y="302" text-anchor="middle" fill="#2b71ad">shared data</text>
-  <text class="mono sub" x="400" y="322" text-anchor="middle">Firestore, live</text>
+  <!-- Header -->
+  <text class="mono" x="32" y="42" font-size="11.5" font-weight="600" letter-spacing="1.2" fill="#2b71ad">ITERATION 3</text>
+  <text x="32" y="66" font-size="15" font-weight="800">A door around the data, coordination on top</text>
 
-  <!-- identity ring -->
-  <rect x="232" y="182" width="336" height="120" rx="14" fill="none" stroke="#2b71ad" stroke-width="1.6" stroke-dasharray="6 4"/>
-  <g transform="translate(250,196)">
-    <rect x="0" y="10" width="26" height="20" rx="3" fill="#ffffff" stroke="#2b71ad" stroke-width="1.5"/>
-    <path d="M5,10 v-4 a8,8 0 0 1 16,0 v4" fill="none" stroke="#2b71ad" stroke-width="1.5"/>
+  <!-- "COORDINATION LAYER" section label -->
+  <text class="mono" x="32" y="100" font-size="10.5" font-weight="600" fill="rgba(26,36,56,0.45)" letter-spacing="0.8">COORDINATION LAYER</text>
+
+  <!-- Three coordination boxes: y=110 to y=170 (h=60) -->
+
+  <!-- View-only link: x=32, w=202, center=133 -->
+  <rect x="32" y="110" width="202" height="60" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="52" y="136" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">View-only link</text>
+  <text class="mono" x="52" y="154" font-size="10.5" fill="rgba(26,36,56,0.42)">?view=1 for stakeholders</text>
+
+  <!-- @mentions + bell: x=259, w=202, center=360 -->
+  <rect x="259" y="110" width="202" height="60" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="279" y="136" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">@mentions + bell</text>
+  <text class="mono" x="279" y="154" font-size="10.5" fill="rgba(26,36,56,0.42)">pull a person into a row</text>
+  <!-- Notification dot -->
+  <circle cx="444" cy="122" r="7" fill="#e87500"/>
+
+  <!-- Live presence: x=486, w=202, center=587 -->
+  <rect x="486" y="110" width="202" height="60" rx="10" fill="#ffffff" stroke="rgba(20,28,44,0.14)" stroke-width="1.5"/>
+  <text x="506" y="136" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.65)">Live presence</text>
+  <text class="mono" x="506" y="154" font-size="10.5" fill="rgba(26,36,56,0.42)">who is here right now</text>
+  <!-- Presence avatar bubbles (3 overlapping circles) -->
+  <circle cx="652" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
+  <circle cx="664" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
+  <circle cx="676" cy="146" r="9" fill="rgba(240,169,61,0.2)" stroke="#f0a93d" stroke-width="1.3"/>
+
+  <!-- Short connector lines from box bottoms (y=170) to dashed ring top (y=192) -->
+  <line x1="133" y1="170" x2="133" y2="192" stroke="#2b71ad" stroke-width="1.3"/>
+  <line x1="360" y1="170" x2="360" y2="192" stroke="#2b71ad" stroke-width="1.3"/>
+  <line x1="587" y1="170" x2="587" y2="192" stroke="#2b71ad" stroke-width="1.3"/>
+
+  <!-- ===================================================
+       DASHED IDENTITY RING: y=192 to y=420 (height=228)
+       This ring is TALL ENOUGH to fully contain all content
+       including the shared data box (which ends at y=390)
+       =================================================== -->
+  <rect x="32" y="192" width="656" height="228" rx="14" fill="none" stroke="#2b71ad" stroke-width="1.6" stroke-dasharray="6 4"/>
+
+  <!-- Padlock icon inside ring (top-left), transform positions at x=58, y=214 -->
+  <g transform="translate(58, 212)">
+    <!-- Lock body -->
+    <rect x="0" y="14" width="26" height="20" rx="3" fill="#ffffff" stroke="#2b71ad" stroke-width="1.5"/>
+    <!-- Closed shackle -->
+    <path d="M5,14 L5,8 A8,8 0 0 1 21,8 L21,14" fill="none" stroke="#2b71ad" stroke-width="1.5"/>
+    <!-- Keyhole dot -->
+    <circle cx="13" cy="22" r="2" fill="#2b71ad"/>
   </g>
-  <text class="lbl" x="286" y="214">Google sign-in</text>
-  <text class="sub" x="286" y="231">popup, redirect fallback</text>
-  <rect class="chip" x="286" y="242" width="88" height="24" rx="12"/>
-  <text class="mono" x="330" y="258" text-anchor="middle" font-size="11" fill="#2b71ad" font-weight="600">admin</text>
-  <rect class="chip" x="384" y="242" width="98" height="24" rx="12"/>
-  <text class="mono" x="433" y="258" text-anchor="middle" font-size="11" fill="#2b71ad" font-weight="600">member</text>
-  <text class="mono sub" x="490" y="200" text-anchor="start">members keyed by email</text>
 
-  <!-- collaboration layer on top -->
-  <text class="mono sub" x="32" y="108">COORDINATION LAYER</text>
+  <!-- Google sign-in text: beside padlock -->
+  <text x="98" y="234" font-size="12.5" font-weight="600" fill="rgba(26,36,56,0.7)">Google sign-in</text>
+  <text class="mono" x="98" y="251" font-size="10.5" fill="rgba(26,36,56,0.42)">popup, redirect fallback</text>
 
-  <!-- view-only link -->
-  <rect class="box" x="40" y="120" width="220" height="52" rx="10"/>
-  <text class="lbl" x="60" y="144">View-only link</text>
-  <text class="sub mono" x="60" y="162">?view=1 for stakeholders</text>
+  <!-- "members keyed by email" - right side of ring, inside -->
+  <text class="mono" x="680" y="212" text-anchor="end" font-size="10.5" fill="rgba(26,36,56,0.42)">members keyed by email</text>
 
-  <!-- mentions -->
-  <rect class="box" x="290" y="120" width="220" height="52" rx="10"/>
-  <text class="lbl" x="310" y="144">@mentions + bell</text>
-  <text class="sub mono" x="310" y="162">pull a person into a row</text>
-  <circle cx="486" cy="132" r="7" fill="#e87500"/>
+  <!-- Role chips: admin and member, below the sign-in text -->
+  <rect x="98" y="264" width="80" height="24" rx="12" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="138" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#2b71ad">admin</text>
 
-  <!-- presence -->
-  <rect class="box" x="540" y="120" width="220" height="52" rx="10"/>
-  <text class="lbl" x="560" y="144">Live presence</text>
-  <text class="sub mono" x="560" y="162">who is here right now</text>
-  <circle cx="712" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
-  <circle cx="726" cy="146" r="9" fill="#eaf3fb" stroke="#2b71ad" stroke-width="1.3"/>
-  <circle cx="740" cy="146" r="9" fill="rgba(240,169,61,0.2)" stroke="#e87500" stroke-width="1.3"/>
+  <rect x="190" y="264" width="90" height="24" rx="12" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.3"/>
+  <text class="mono" x="235" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#2b71ad">member</text>
 
-  <!-- connectors -->
-  <path d="M150,172 L150,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
-  <path d="M400,172 L400,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
-  <path d="M650,172 L650,182" stroke="#2b71ad" stroke-width="1.4" fill="none"/>
+  <!-- ===================================================
+       SHARED DATA BOX: y=308 to y=384
+       Fully inside the dashed ring (ring ends at y=420)
+       =================================================== -->
+  <rect x="250" y="308" width="220" height="76" rx="12" fill="#eaf3fb" stroke="#c3d9ee" stroke-width="1.5"/>
+  <text x="360" y="342" text-anchor="middle" font-size="14" font-weight="800" fill="#2b71ad">shared data</text>
+  <text class="mono" x="360" y="360" text-anchor="middle" font-size="10.5" fill="rgba(26,36,56,0.45)">Firestore, live</text>
 </svg>
