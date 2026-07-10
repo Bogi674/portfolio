@@ -1,8 +1,4 @@
 // render-home.js
-//
-// Fetches content/profile/profile.md and every file listed in
-// content/case-studies/manifest.js, then fills in index.html.
-// No build step, this runs in the browser exactly as written.
 
 import { fetchMarkdown, markdownToHtml, escapeHtml } from './content.js';
 import { caseStudyFiles } from '../content/case-studies/manifest.js';
@@ -131,17 +127,33 @@ function renderSkills() {
   });
 }
 
+const ARROW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+  <path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>
+</svg>`;
+
 function renderWorkWithMe() {
   const engagementsEl = document.getElementById('wwm-engagements');
-  engagements.forEach((e) => {
+
+  engagements.forEach((e, i) => {
     const card = document.createElement('div');
     card.className = 'wwm-card';
     card.innerHTML = `
-      <span class="wwm-timing">${escapeHtml(e.timing)}</span>
-      <h3 class="wwm-card-title">${escapeHtml(e.title)}</h3>
-      <p class="wwm-card-desc">${escapeHtml(e.description)}</p>
+      <div class="wwm-icon">${e.icon}</div>
+      <div class="wwm-card-body">
+        <span class="wwm-timing">${escapeHtml(e.timing)}</span>
+        <h3 class="wwm-card-title">${escapeHtml(e.title)}</h3>
+        <p class="wwm-card-subtitle">${escapeHtml(e.subtitle)}</p>
+      </div>
     `;
     engagementsEl.appendChild(card);
+
+    if (i < engagements.length - 1) {
+      const arrow = document.createElement('div');
+      arrow.className = 'wwm-arrow';
+      arrow.innerHTML = ARROW_ICON;
+      engagementsEl.appendChild(arrow);
+    }
   });
 
   const audienceEl = document.getElementById('wwm-audience');
@@ -158,19 +170,113 @@ function renderWorkWithMe() {
 }
 
 function renderTestimonials() {
-  const gridEl = document.getElementById('testimonials-grid');
+  const container = document.getElementById('testimonials-grid');
+  container.className = 'testimonials-carousel';
+
+  // Row: prev button + track-wrap + next button
+  const row = document.createElement('div');
+  row.className = 'testimonials-row';
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'testimonials-nav testimonials-prev';
+  prevBtn.setAttribute('aria-label', 'Previous testimonial');
+  prevBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+    <path d="M15 18l-6-6 6-6"/></svg>`;
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'testimonials-nav testimonials-next';
+  nextBtn.setAttribute('aria-label', 'Next testimonial');
+  nextBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+    <path d="M9 18l6-6-6-6"/></svg>`;
+
+  const trackWrap = document.createElement('div');
+  trackWrap.className = 'testimonials-track-wrap';
+
+  const track = document.createElement('div');
+  track.className = 'testimonials-track';
+
   testimonials.forEach((t) => {
-    const card = document.createElement('div');
-    card.className = 'testimonial-card';
-    card.innerHTML = `
-      <p class="testimonial-quote">${escapeHtml(t.quote)}</p>
-      <div class="testimonial-attr">
-        <span class="testimonial-name">${escapeHtml(t.name)}</span>
-        <span class="testimonial-role">${escapeHtml(t.role)}, ${escapeHtml(t.company)}</span>
+    const slide = document.createElement('div');
+    slide.className = 'testimonial-slide';
+    slide.innerHTML = `
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">\u201C</div>
+        <p class="testimonial-quote">${escapeHtml(t.quote)}</p>
+        <div class="testimonial-attr">
+          <span class="testimonial-name">${escapeHtml(t.name)}</span>
+          <span class="testimonial-role">${escapeHtml(t.role)}, ${escapeHtml(t.company)}</span>
+        </div>
       </div>
     `;
-    gridEl.appendChild(card);
+    track.appendChild(slide);
   });
+
+  trackWrap.appendChild(track);
+  row.appendChild(prevBtn);
+  row.appendChild(trackWrap);
+  row.appendChild(nextBtn);
+
+  // Dots
+  const dots = document.createElement('div');
+  dots.className = 'testimonials-dots';
+  testimonials.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'testimonials-dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+    dots.appendChild(dot);
+  });
+
+  container.appendChild(row);
+  container.appendChild(dots);
+
+  // Carousel logic
+  let current = 0;
+  let autoTimer = null;
+  const total = testimonials.length;
+  const dotEls = dots.querySelectorAll('.testimonials-dot');
+
+  function goTo(idx) {
+    current = ((idx % total) + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotEls.forEach((d, i) => d.classList.toggle('is-active', i === current));
+  }
+
+  function startAuto() {
+    if (!window.matchMedia('(hover: hover)').matches) return;
+    autoTimer = setInterval(() => goTo(current + 1), 15000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+  nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+  dotEls.forEach((dot, i) => {
+    dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+  });
+
+  container.addEventListener('mouseenter', stopAuto);
+  container.addEventListener('mouseleave', startAuto);
+
+  // Swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      stopAuto();
+      goTo(diff > 0 ? current + 1 : current - 1);
+      startAuto();
+    }
+  }, { passive: true });
+
+  startAuto();
 }
 
 async function init() {
