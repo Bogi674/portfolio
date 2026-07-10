@@ -25,6 +25,9 @@ function renderNavAndFooter(profile) {
   if (p.email) links.push(`<a href="${p.email}">Email</a>`);
   if (p.upwork) links.push(`<a href="${p.upwork}" target="_blank" rel="noreferrer">Upwork</a>`);
   footerLinks.innerHTML = links.join('');
+
+  const ctaBtn = document.getElementById('cs-cta-btn');
+  if (ctaBtn && p.email) ctaBtn.href = p.email;
 }
 
 function renderCaseStudy(entry, profileName) {
