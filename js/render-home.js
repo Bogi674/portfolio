@@ -8,6 +8,8 @@ import { fetchMarkdown, markdownToHtml, escapeHtml } from './content.js';
 import { caseStudyFiles } from '../content/case-studies/manifest.js';
 import { skillCategories } from './skills.js';
 import { ICONS } from './icons.js';
+import { engagements, wwmAudience } from './work-with-me.js';
+import { testimonials } from './testimonials.js';
 
 const statusEl = document.getElementById('status');
 const pageEl = document.getElementById('page');
@@ -129,12 +131,56 @@ function renderSkills() {
   });
 }
 
+function renderWorkWithMe() {
+  const engagementsEl = document.getElementById('wwm-engagements');
+  engagements.forEach((e) => {
+    const card = document.createElement('div');
+    card.className = 'wwm-card';
+    card.innerHTML = `
+      <span class="wwm-timing">${escapeHtml(e.timing)}</span>
+      <h3 class="wwm-card-title">${escapeHtml(e.title)}</h3>
+      <p class="wwm-card-desc">${escapeHtml(e.description)}</p>
+    `;
+    engagementsEl.appendChild(card);
+  });
+
+  const audienceEl = document.getElementById('wwm-audience');
+  const listItems = wwmAudience
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join('');
+  audienceEl.innerHTML = `
+    <div class="wwm-audience-inner">
+      <p class="wwm-audience-label">This works best if you are</p>
+      <ul class="wwm-audience-list">${listItems}</ul>
+      <a href="#contact" class="btn wwm-cta">Let's figure out the right fit</a>
+    </div>
+  `;
+}
+
+function renderTestimonials() {
+  const gridEl = document.getElementById('testimonials-grid');
+  testimonials.forEach((t) => {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+    card.innerHTML = `
+      <p class="testimonial-quote">${escapeHtml(t.quote)}</p>
+      <div class="testimonial-attr">
+        <span class="testimonial-name">${escapeHtml(t.name)}</span>
+        <span class="testimonial-role">${escapeHtml(t.role)}, ${escapeHtml(t.company)}</span>
+      </div>
+    `;
+    gridEl.appendChild(card);
+  });
+}
+
 async function init() {
   try {
     const profile = await fetchMarkdown('content/profile/profile.md');
     renderProfile(profile);
     await renderCaseStudies();
     renderSkills();
+    renderWorkWithMe();
+    renderTestimonials();
 
     statusEl.hidden = true;
     pageEl.hidden = false;
