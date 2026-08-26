@@ -1,0 +1,82 @@
+<svg viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+
+  <rect width="780" height="400" fill="#f6f8fb"/>
+
+  <!-- Title -->
+  <text x="390" y="28" font-size="10" font-family="ui-monospace, monospace" fill="#9aaab8" text-anchor="middle" letter-spacing="0.1em" font-weight="500">8 VERSIONS ACROSS 18 DAYS · AUG 6 TO AUG 24, 2026</text>
+
+  <!-- Vertical timeline line -->
+  <line x1="130" y1="50" x2="130" y2="385" stroke="#e8ecf2" stroke-width="2"/>
+
+  <!-- ===== ROW 1: Legacy ===== -->
+  <!-- Dot -->
+  <circle cx="130" cy="68" r="6" fill="#9aaab8" stroke="#f6f8fb" stroke-width="2.5"/>
+  <!-- Date label -->
+  <text x="118" y="64" font-size="9" font-family="ui-monospace, monospace" fill="#b8c8d6" text-anchor="end" letter-spacing="0.06em">PRE-AUG</text>
+  <!-- Version badge -->
+  <rect x="148" y="59" width="60" height="20" rx="5" fill="#f4f5f7" stroke="#e8ecf2" stroke-width="1"/>
+  <text x="178" y="73" font-size="9.5" font-family="ui-monospace, monospace" fill="#9aaab8" text-anchor="middle" font-weight="600">Legacy</text>
+  <!-- Description -->
+  <text x="224" y="68" font-size="12" fill="#9aaab8" text-anchor="start" font-style="italic">Platform · Project · Workstream · Entry — deprecated</text>
+
+  <!-- ===== Pivot marker ===== -->
+  <line x1="90" y1="95" x2="680" y2="95" stroke="#fdf3d6" stroke-width="24" rx="3"/>
+  <text x="390" y="100" font-size="10" fill="#7a5c10" text-anchor="middle" letter-spacing="0.06em" font-weight="600">PIVOT: Deprecated and rebuilt from scratch. 950-line BRD. Hi-fi prototypes.</text>
+
+  <!-- ===== ROW 2: v1.0 ===== -->
+  <circle cx="130" cy="128" r="7" fill="#4a6090" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="124" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 6–7</text>
+  <rect x="148" y="118" width="46" height="20" rx="5" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1"/>
+  <text x="171" y="132" font-size="9.5" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" font-weight="600">v1.0</text>
+  <text x="208" y="128" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Foundation</text>
+  <text x="208" y="141" font-size="10.5" fill="#738290" text-anchor="start">Schema · Google OAuth · TipTap editor · Spaces · PWA</text>
+
+  <!-- ===== ROW 3: v1.1 ===== -->
+  <circle cx="130" cy="170" r="7" fill="#4a6090" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="166" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 7</text>
+  <rect x="148" y="160" width="46" height="20" rx="5" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1"/>
+  <text x="171" y="174" font-size="9.5" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" font-weight="600">v1.1</text>
+  <text x="208" y="170" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Power features</text>
+  <text x="208" y="183" font-size="10.5" fill="#738290" text-anchor="start">Note locking · Version history · Export · Reminders · Appearance settings</text>
+
+  <!-- ===== ROW 4: v1.2 ===== -->
+  <circle cx="130" cy="212" r="7" fill="#4a6090" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="208" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 7–8</text>
+  <rect x="148" y="202" width="46" height="20" rx="5" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1"/>
+  <text x="171" y="216" font-size="9.5" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" font-weight="600">v1.2</text>
+  <text x="208" y="212" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Calendar and drag</text>
+  <text x="208" y="225" font-size="10.5" fill="#738290" text-anchor="start">Calendar (month + week) · Drag-to-date · Drag-to-space · Autosave hardening</text>
+
+  <!-- ===== ROW 5: v1.3 ===== -->
+  <circle cx="130" cy="254" r="7" fill="#4a6a40" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="250" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 10–11</text>
+  <rect x="148" y="244" width="46" height="20" rx="5" fill="#e4f0d0" stroke="#c2d8b9" stroke-width="1"/>
+  <text x="171" y="258" font-size="9.5" font-family="ui-monospace, monospace" fill="#4a6a40" text-anchor="middle" font-weight="600">v1.3</text>
+  <text x="208" y="254" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Expressiveness</text>
+  <text x="208" y="267" font-size="10.5" fill="#738290" text-anchor="start">Widget system · Dark theme · Per-space backgrounds · 4 note surfaces</text>
+
+  <!-- ===== ROW 6: v1.4 ===== -->
+  <circle cx="130" cy="293" r="7" fill="#4a6090" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="289" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 12–14</text>
+  <rect x="148" y="283" width="46" height="20" rx="5" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1"/>
+  <text x="171" y="297" font-size="9.5" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" font-weight="600">v1.4</text>
+  <text x="208" y="293" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Mobile polish</text>
+  <text x="208" y="306" font-size="10.5" fill="#738290" text-anchor="start">Keyboard-aware toolbar · Theme persistence · iOS overscroll fix</text>
+
+  <!-- ===== ROW 7: v1.5 ===== -->
+  <circle cx="130" cy="330" r="7" fill="#2a7a6a" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="326" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 18</text>
+  <rect x="148" y="320" width="46" height="20" rx="5" fill="#e0f4f1" stroke="#9fd4c8" stroke-width="1"/>
+  <text x="171" y="334" font-size="9.5" font-family="ui-monospace, monospace" fill="#2a7a6a" text-anchor="middle" font-weight="600">v1.5</text>
+  <text x="208" y="330" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">Security hardening</text>
+  <text x="208" y="343" font-size="10.5" fill="#738290" text-anchor="start">search_path hardening · RPC exposure locked down · No user-facing changes</text>
+
+  <!-- ===== ROW 8: v1.6 ===== -->
+  <circle cx="130" cy="370" r="8" fill="#8a3030" stroke="#f6f8fb" stroke-width="2.5"/>
+  <text x="118" y="366" font-size="9" font-family="ui-monospace, monospace" fill="#738290" text-anchor="end" letter-spacing="0.06em">AUG 18–24</text>
+  <rect x="148" y="359" width="72" height="20" rx="5" fill="#fce8e8" stroke="#f4b8b8" stroke-width="1"/>
+  <text x="184" y="373" font-size="9.5" font-family="ui-monospace, monospace" fill="#8a3030" text-anchor="middle" font-weight="600">v1.6 / Phase 7</text>
+  <text x="234" y="369" font-size="12" fill="#2c3848" text-anchor="start" font-weight="500">First-class to-dos</text>
+  <text x="234" y="382" font-size="10.5" fill="#738290" text-anchor="start">Dedicated route · DnD reordering · PeriodView · Recurrence support</text>
+
+</svg>
