@@ -74,6 +74,10 @@ export function markdownToHtml(body) {
         return `<h${level}>${inlineMarkdown(heading[2])}</h${level}>`;
       }
 
+      if (block === '---') {
+        return '<hr />';
+      }
+
       const image = block.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
       if (image) {
         const [, alt, src] = image;
@@ -86,6 +90,11 @@ export function markdownToHtml(body) {
 }
 
 function inlineMarkdown(text) {
+  // Links before bold so **bold** inside link labels also gets converted
+  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, url) => {
+    const safeUrl = url.replace(/"/g, '%22');
+    return `<a href="${safeUrl}" target="_blank" rel="noreferrer noopener">${label}</a>`;
+  });
   return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 }
 
