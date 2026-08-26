@@ -6,7 +6,7 @@ role: "Product Manager, ACC ONE Platform"
 timeline: "4 iterations, ongoing"
 impact: "Conversion nearly 2x non-WhatsApp channels"
 quote: "The final redesign was not a bet, it was the logical conclusion of evidence the funnel had been giving us all along."
-order: 1
+order: 2
 coverImage: "images/case-study-01/case-study-1-thumb.jpg"
 ---
 ### The Baseline: A Broken Flow That Still Won
