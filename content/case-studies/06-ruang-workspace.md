@@ -80,4 +80,4 @@ The real work here was not choosing what to build. It was deciding whether somet
 
 ---
 
-[GitHub](https://github.com/Bogi674/ruang-project-management) · [Live App](https://ruang-project-management.vercel.app)
+[**GitHub**](https://github.com/Bogi674/ruang-project-management) · [**Live App**](https://ruang-personal.vercel.app/)
