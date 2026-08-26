@@ -6,7 +6,7 @@ role: "Product Consultant"
 timeline: "Concept to build-ready delivery"
 impact: "Full PRD · 5-module flows · High-fi Figma prototype"
 quote: "The client had a good instinct about the problem. The work was to translate that instinct into something a development team could actually build from."
-order: 3
+order: 4
 coverImage: "images/case-study-03/save-cover.jpg"
 ---
 
