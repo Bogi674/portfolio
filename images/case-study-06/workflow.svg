@@ -1,0 +1,74 @@
+<svg viewBox="0 0 780 300" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+
+  <rect width="780" height="300" fill="#f6f8fb"/>
+
+  <!-- Title -->
+  <text x="390" y="28" font-size="10" font-family="ui-monospace, monospace" fill="#9aaab8" text-anchor="middle" letter-spacing="0.1em" font-weight="500">THE DEVELOPMENT LOOP</text>
+
+  <!-- Central label -->
+  <text x="390" y="162" font-size="10" fill="#b8c8d6" text-anchor="middle" letter-spacing="0.06em">Each iteration</text>
+  <text x="390" y="176" font-size="10" fill="#b8c8d6" text-anchor="middle" letter-spacing="0.06em">in minutes</text>
+
+  <!-- Step positions (arranged in a horizontal flow) -->
+  <!-- Step 1: PM Describes -->
+  <rect x="28" y="95" width="118" height="72" rx="10" fill="#ffffff" stroke="#e8ecf2" stroke-width="1.5"/>
+  <text x="87" y="116" font-size="9" font-family="ui-monospace, monospace" fill="#9aaab8" text-anchor="middle" letter-spacing="0.08em" font-weight="500">STEP 1</text>
+  <text x="87" y="133" font-size="13" fill="#2c3848" text-anchor="middle" font-weight="600">PM Describes</text>
+  <text x="87" y="149" font-size="10" fill="#738290" text-anchor="middle">What to build or</text>
+  <text x="87" y="161" font-size="10" fill="#738290" text-anchor="middle">what is broken</text>
+
+  <!-- Arrow 1 to 2 -->
+  <line x1="147" y1="131" x2="168" y2="131" stroke="#d8e0ea" stroke-width="1.5"/>
+  <polygon points="172,131 163,126 163,136" fill="#d8e0ea"/>
+
+  <!-- Step 2: Claude Diagnoses -->
+  <rect x="173" y="95" width="118" height="72" rx="10" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1.5"/>
+  <text x="232" y="116" font-size="9" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" letter-spacing="0.08em" font-weight="500">STEP 2</text>
+  <text x="232" y="133" font-size="13" fill="#2c3848" text-anchor="middle" font-weight="600">AI Diagnoses</text>
+  <text x="232" y="149" font-size="10" fill="#4a6090" text-anchor="middle">Root cause from</text>
+  <text x="232" y="161" font-size="10" fill="#4a6090" text-anchor="middle">the repository</text>
+
+  <!-- Arrow 2 to 3 -->
+  <line x1="292" y1="131" x2="313" y2="131" stroke="#d8e0ea" stroke-width="1.5"/>
+  <polygon points="317,131 308,126 308,136" fill="#d8e0ea"/>
+
+  <!-- Step 3: Fix Applied -->
+  <rect x="318" y="95" width="118" height="72" rx="10" fill="#dce8f6" stroke="#bfd2ec" stroke-width="1.5"/>
+  <text x="377" y="116" font-size="9" font-family="ui-monospace, monospace" fill="#4a6090" text-anchor="middle" letter-spacing="0.08em" font-weight="500">STEP 3</text>
+  <text x="377" y="133" font-size="13" fill="#2c3848" text-anchor="middle" font-weight="600">Fix Applied</text>
+  <text x="377" y="149" font-size="10" fill="#4a6090" text-anchor="middle">Surgical edits,</text>
+  <text x="377" y="161" font-size="10" fill="#4a6090" text-anchor="middle">never full rewrites</text>
+
+  <!-- Arrow 3 to 4 -->
+  <line x1="437" y1="131" x2="458" y2="131" stroke="#d8e0ea" stroke-width="1.5"/>
+  <polygon points="462,131 453,126 453,136" fill="#d8e0ea"/>
+
+  <!-- Step 4: Push to GitHub -->
+  <rect x="463" y="95" width="118" height="72" rx="10" fill="#e0f4f1" stroke="#9fd4c8" stroke-width="1.5"/>
+  <text x="522" y="116" font-size="9" font-family="ui-monospace, monospace" fill="#2a7a6a" text-anchor="middle" letter-spacing="0.08em" font-weight="500">STEP 4</text>
+  <text x="522" y="133" font-size="13" fill="#2c3848" text-anchor="middle" font-weight="600">Push + Deploy</text>
+  <text x="522" y="149" font-size="10" fill="#2a7a6a" text-anchor="middle">GitHub push triggers</text>
+  <text x="522" y="161" font-size="10" fill="#2a7a6a" text-anchor="middle">Vercel autodeploy</text>
+
+  <!-- Arrow 4 to 5 -->
+  <line x1="582" y1="131" x2="603" y2="131" stroke="#d8e0ea" stroke-width="1.5"/>
+  <polygon points="607,131 598,126 598,136" fill="#d8e0ea"/>
+
+  <!-- Step 5: PM Reviews -->
+  <rect x="608" y="95" width="118" height="72" rx="10" fill="#ffffff" stroke="#e8ecf2" stroke-width="1.5"/>
+  <text x="667" y="116" font-size="9" font-family="ui-monospace, monospace" fill="#9aaab8" text-anchor="middle" letter-spacing="0.08em" font-weight="500">STEP 5</text>
+  <text x="667" y="133" font-size="13" fill="#2c3848" text-anchor="middle" font-weight="600">PM Reviews</text>
+  <text x="667" y="149" font-size="10" fill="#738290" text-anchor="middle">Quality gate on</text>
+  <text x="667" y="161" font-size="10" fill="#738290" text-anchor="middle">the live build</text>
+
+  <!-- Return arrow: Step 5 back to Step 1 (arc below) -->
+  <path d="M 667 167 Q 667 240 390 240 Q 113 240 87 167" fill="none" stroke="#e8ecf2" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="87,163 82,173 92,173" fill="#e8ecf2"/>
+  <text x="390" y="235" font-size="9" fill="#b8c8d6" text-anchor="middle" letter-spacing="0.04em">Back to step 1 if changes needed</text>
+
+  <!-- CLAUDE.md footnote -->
+  <rect x="240" y="258" width="300" height="28" rx="7" fill="#f4f5f7" stroke="#e8ecf2" stroke-width="1"/>
+  <text x="390" y="270" font-size="9.5" fill="#738290" text-anchor="middle" font-weight="500">CLAUDE.md persists architectural context across all sessions</text>
+  <text x="390" y="281" font-size="9" fill="#9aaab8" text-anchor="middle">Every session starts fully informed. No re-explanation needed.</text>
+
+</svg>
