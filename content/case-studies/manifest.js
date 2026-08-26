@@ -11,6 +11,7 @@
 // each .md file, not by the order of this list.
 
 export const caseStudyFiles = [
+  '06-ruang-workspace',
   '01-whatsapp-acquisition-funnel',
   '02-digital-migration',
   '03-save-app',
