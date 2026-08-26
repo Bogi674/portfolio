@@ -7,7 +7,7 @@ timeline: "~18 months"
 impact: "71.2% full-year avg · 3x Digital STNK growth · Rp 70M service charge · 50%+ walk-in migrated"
 quote: "Customers don't switch channels because a screen looks nicer. They switch when someone removes the reason they were avoiding it in the first place."
 coverImage: "images/case-study-02/digital-service-thumb.jpg"
-order: 2
+order: 3
 ---
 
 ## The Problem
