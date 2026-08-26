@@ -7,6 +7,7 @@ timeline: "Aug 6–24, 2026 (18 days)"
 impact: "8 releases, 25+ features, 0 lines written by hand"
 quote: "I stopped treating the BRD as planning overhead around line 200. At 950 lines it was the most important document in the entire project."
 order: 1
+coverImage: images/case-study-06/ruang-cover.jpg
 ---
 
 ### What This Is
