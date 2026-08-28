@@ -5,7 +5,7 @@ summary: "Four iterations of one experiment: every time we cut reply time, conve
 role: "Product Manager, ACC ONE Platform"
 timeline: "4 iterations, ongoing"
 impact: "Conversion nearly 2x non-WhatsApp channels"
-quote: "The final redesign was not a bet, it was the logical conclusion of evidence the funnel had been giving us all along."
+quote: "The planned redesign is not a bet. It is the logical conclusion of evidence the funnel has been giving us all along."
 order: 2
 coverImage: "images/case-study-01/case-study-1-thumb.jpg"
 ---
@@ -35,22 +35,26 @@ Conversion stepped up again, reaching nearly double the non-WhatsApp baseline. T
 
 ### The Friction Speed Couldn't Fix
 
-Even at near-instant response, the post-conversation journey was still broken. After agreeing on a deal inside chat, the customer had to leave WhatsApp, open the ACC ONE app, log in, find the plafond menu, and re-enter an application based on a conversation that had already happened. Then they waited for the same telemarketer who already had all the information to review and approve it before it went to a branch for signing.
+Two live iterations confirmed the pattern. But stepping back after Iteration 2, it became clear that reply speed was only part of the problem. Even at near-instant response, the post-conversation journey was still broken. After agreeing on a deal inside chat, the customer had to leave WhatsApp, open the ACC ONE app, log in, find the plafond menu, and re-enter an application based on a conversation that had already happened. Then they waited for the same telemarketer who already had all the information to review and approve it before it went to a branch for signing.
 
 We had optimized the conversation and never touched the handoff after it.
 
 ![The remaining friction: after the deal is made in chat, the customer is routed through a separate app to re-apply and wait for review again](images/case-study-01/iter-3-friction.svg)
 
-### The Redesign: WhatsApp-Native End to End
+### The Next Step: WhatsApp-Native End to End
 
-The current project closes that gap by rebuilding the journey inside WhatsApp from first message to final decision. The YUNA chatbot qualifies leads and captures application data inside the same thread. Low-risk cases get an instant decision. Human agents handle only the cases that need judgment, the exact pattern the live-agent experiment had already validated.
+That gap is what I am now working to close. The evidence from the first two iterations is consistent enough that I am confident about the direction: rebuild the entire customer journey inside WhatsApp, from first message to final decision, so the customer never has to leave.
 
-The goal: cut customer lead time, speed up the acquisition cycle, and remove the handoff friction the old flow kept reintroducing. Conversion should climb further on top of what reply speed alone had already proven.
+The plan is to use a WhatsApp chatbot to qualify leads and capture application data inside the same thread. Low-risk cases would receive an instant decision. Human agents would handle only the cases that need judgment, which is the exact pattern the live-agent experiment had already validated.
+
+The goal is to cut customer lead time, speed up the acquisition cycle, and remove the handoff friction the old flow kept reintroducing. If the pattern holds, conversion should climb further on top of what reply speed alone had already proven.
+
+This iteration is not yet live. I have drafted the planned flow as a BRD with a BPMN 2.0 process diagram, which is now the shared reference across product, operations, and engineering as we move into the build.
 
 ![WhatsApp-native acquisition flow: chatbot qualifies the lead, low-risk cases get an instant decision, harder cases go to a human agent, all inside WhatsApp](images/case-study-01/funnel-diagram.svg)
 
-I documented the full flow as a BRD with a BPMN 2.0 process diagram, which became the shared reference across product, operations, and engineering during the build.
-
 ### What This Shows
 
-I didn't start by assuming WhatsApp-native was the answer. Each iteration was a small, cheap test with one variable changed, and each result justified the next investment. The final redesign was not a bet, it was the logical conclusion of evidence the funnel had been giving us all along.
+I didn't start by assuming WhatsApp-native was the answer. Each iteration was a small, cheap test with one variable changed, and each result justified the next investment. The first two iterations are live and delivering results. The third is still in progress.
+
+The planned redesign is not a bet. It is the logical conclusion of evidence the funnel has been giving us all along.
