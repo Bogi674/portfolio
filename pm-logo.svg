@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: dark navy, rounded badge -->
+  <rect width="100" height="100" rx="20" fill="#0f172a"/>
+
+  <!-- Priority funnel bars — all centered at x=50 -->
+  <!-- P1 (Now): full width, full opacity -->
+  <rect x="24" y="12" width="52" height="8" rx="4" fill="#eb6c36"/>
+  <!-- P2 (Next): medium width, 60% opacity -->
+  <rect x="32" y="24" width="36" height="8" rx="4" fill="#eb6c36" opacity="0.6"/>
+  <!-- P3 (Later): narrow, 28% opacity -->
+  <rect x="40" y="36" width="20" height="8" rx="4" fill="#eb6c36" opacity="0.28"/>
+
+  <!-- Bold B initial -->
+  <text
+    x="50"
+    y="88"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="48"
+    fill="white"
+    text-anchor="middle">B</text>
+</svg>
