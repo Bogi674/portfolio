@@ -252,6 +252,19 @@ a {
   margin: 0;
 }
 
+.hero-email {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--amber-solid);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.hero-email:hover {
+  color: var(--amber-solid);
+}
+
 .hero-actions {
   display: flex;
   align-items: center;

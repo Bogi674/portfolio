@@ -3,7 +3,7 @@
 // Reads ?slug=your-file from the URL, fetches content/case-studies/your-file.md,
 // and fills in case-study.html. Also fetches profile.md just for the nav/footer.
 
-import { fetchMarkdown, markdownToHtml, escapeHtml } from './content.js';
+import { fetchMarkdown, markdownToHtml, escapeHtml, mailtoHref } from './content.js';
 
 const statusEl = document.getElementById('status');
 const pageEl = document.getElementById('page');
@@ -15,6 +15,7 @@ function showError(message) {
 
 function renderNavAndFooter(profile) {
   const p = profile.data;
+  const mailto = mailtoHref(p.email);
   document.getElementById('nav-brand').textContent = p.name;
   document.getElementById('footer-copyright').textContent =
     `\u00A9 ${new Date().getFullYear()} ${p.name}`;
@@ -22,12 +23,15 @@ function renderNavAndFooter(profile) {
   const footerLinks = document.getElementById('footer-links');
   const links = [];
   if (p.linkedin) links.push(`<a href="${p.linkedin}" target="_blank" rel="noreferrer">LinkedIn</a>`);
-  if (p.email) links.push(`<a href="${p.email}">Email</a>`);
+  if (mailto) links.push(`<a href="${mailto}">Email</a>`);
   if (p.upwork) links.push(`<a href="${p.upwork}" target="_blank" rel="noreferrer">Upwork</a>`);
   footerLinks.innerHTML = links.join('');
 
   const ctaBtn = document.getElementById('cs-cta-btn');
-  if (ctaBtn && p.email) ctaBtn.href = p.email;
+  if (ctaBtn && mailto) ctaBtn.href = mailto;
+
+  const navCta = document.getElementById('nav-cta');
+  if (navCta && mailto) navCta.href = mailto;
 }
 
 function renderCaseStudy(entry, profileName) {

@@ -1,6 +1,6 @@
 // render-home.js
 
-import { fetchMarkdown, markdownToHtml, escapeHtml } from './content.js';
+import { fetchMarkdown, markdownToHtml, escapeHtml, mailtoHref, emailAddress } from './content.js';
 import { caseStudyFiles } from '../content/case-studies/manifest.js';
 import { skillCategories } from './skills.js';
 import { ICONS } from './icons.js';
@@ -24,7 +24,18 @@ function renderProfile(profile) {
   document.getElementById('nav-brand').textContent = p.name;
   document.getElementById('hero-eyebrow').textContent = p.eyebrow;
   document.getElementById('hero-headline').textContent = p.headline;
-  document.getElementById('hero-intro').textContent = p.intro;
+  const mailto = mailtoHref(p.email);
+  const introEl = document.getElementById('hero-intro');
+  introEl.textContent = p.intro;
+  if (mailto && p.introContact) {
+    introEl.append(` ${p.introContact} `);
+    const link = document.createElement('a');
+    link.href = mailto;
+    link.className = 'hero-email';
+    link.textContent = emailAddress(p.email);
+    introEl.append(link, '.');
+  }
+  if (mailto) document.getElementById('nav-cta').href = mailto;
 
   if (p.headshot) {
     document.getElementById('hero-portrait').innerHTML =
@@ -58,7 +69,7 @@ function renderProfile(profile) {
 
   document.getElementById('cta-headline').textContent = p.ctaHeadline;
   document.getElementById('cta-body').textContent = p.ctaBody;
-  document.getElementById('cta-email').href = p.email || '#contact';
+  document.getElementById('cta-email').href = mailto || '#contact';
 
   document.getElementById('footer-copyright').textContent =
     `\u00A9 ${new Date().getFullYear()} ${p.name}`;
@@ -66,7 +77,7 @@ function renderProfile(profile) {
   const footerLinks = document.getElementById('footer-links');
   const links = [];
   if (p.linkedin) links.push(`<a href="${p.linkedin}" target="_blank" rel="noreferrer">LinkedIn</a>`);
-  if (p.email) links.push(`<a href="${p.email}">Email</a>`);
+  if (mailto) links.push(`<a href="${mailto}">Email</a>`);
   if (p.upwork) links.push(`<a href="${p.upwork}" target="_blank" rel="noreferrer">Upwork</a>`);
   footerLinks.innerHTML = links.join('');
 }

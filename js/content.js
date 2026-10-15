@@ -126,3 +126,19 @@ export function escapeHtml(str) {
   div.textContent = str ?? '';
   return div.innerHTML;
 }
+
+// Contact email used by every "Let's talk" / Email link on the site.
+// Opens the visitor's mail app with the subject and body already filled in.
+export const CONTACT_SUBJECT = 'Interest in Product Manager (PM) Service';
+export const CONTACT_BODY =
+  'Hi Bogiva,\n\nI am interested in discussing about possible Product Management service need for my product';
+
+export function emailAddress(raw) {
+  return (raw || '').replace(/^mailto:/i, '').split('?')[0].trim();
+}
+
+export function mailtoHref(raw) {
+  const address = emailAddress(raw);
+  if (!address) return '';
+  return `mailto:${address}?subject=${encodeURIComponent(CONTACT_SUBJECT)}&body=${encodeURIComponent(CONTACT_BODY)}`;
+}
