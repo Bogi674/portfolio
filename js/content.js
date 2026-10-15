@@ -129,9 +129,9 @@ export function escapeHtml(str) {
 
 // Contact email used by every "Let's talk" / Email link on the site.
 // Opens the visitor's mail app with the subject and body already filled in.
-export const CONTACT_SUBJECT = 'Interest in Product Manager (PM) Service';
+export const CONTACT_SUBJECT = 'Product management support for my product';
 export const CONTACT_BODY =
-  'Hi Bogiva,\n\nI am interested in discussing about possible Product Management service need for my product';
+  "Hi Bogiva,\n\nI'd like to talk about getting product management support for my product. A bit about what we're working on:\n\n";
 
 export function emailAddress(raw) {
   return (raw || '').replace(/^mailto:/i, '').split('?')[0].trim();
